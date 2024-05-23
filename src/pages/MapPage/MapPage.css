@@ -41,8 +41,8 @@
 .sidebar {
   position: absolute;
   top: 10px;
-  left: 60px; /* Adjusted to leave space for the button */
-  height: calc(100% - 20px); /* Adjust for padding */
+  left: 60px; 
+  height: calc(100% - 20px); 
   width: 250px;
   background-color: rgba(69, 57, 50, 0.9); 
   color: #f4e8d3; 
@@ -50,40 +50,111 @@
   border-right: 2px solid #8a7f78; 
   overflow-y: auto;
   z-index: 999;
-  box-sizing: border-box; /* Include padding in the element's total width and height */
+  box-sizing: border-box; 
 }
 
-.sidebar .layer-options {
+.layer-options {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
 
-.sidebar .submenu {
-  padding-left: 20px;
-  margin-top: 10px;
+.sidebar {
+  position: absolute;
+  top: 10px;
+  left: 60px; 
+  max-height: 80%; /* Adjusted to not go too low */
+  width: 250px;
+  background-color: rgba(244, 232, 211, 0.8);
+  color: #f4e8d3; 
+  padding: 20px;
+  border: 4px solid #422f0b;
+  border-radius: 4px;
+  overflow-y: auto;
+  z-index: 999;
+  box-sizing: border-box; 
+}
+
+.sidebar h2
+{
+  color: #422f0b;
+}
+
+.layer-options {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 10px;
 }
 
-.layer-options button, .back-button {
-  background-color: #6e6658; /* Old paper style for buttons */
-  color: #f4e8d3; /* Parchment text color */
-  border: 1px solid #746a64; /* Darker border for definition */
-  padding: 10px;
+.layer-item {
+  display: flex;
+  align-items: center;
   margin-bottom: 10px;
-  width: 100%;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  border: 2px solid transparent;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+  background-size: cover;
+  background-position: center;
 }
 
-.layer-options button:hover, .back-button:hover {
-  background-color: #8a7f78; /* Lighter parchment on hover */
+
+.layer-item.political {
+  background-image: url('../../../public/assets/images/backgrounds/layers/political.jpg');
 }
 
-.submenu label {
+.layer-item.cultural {
+  background-image: url('../../../public/assets/images/backgrounds/layers/cultural.jpg');
+}
+
+.layer-item.religious {
+  background-image: url('../../../public/assets/images/backgrounds/layers/religious.jpg');
+}
+
+.layer-item.population {
+  background-image: url('../../../public/assets/images/backgrounds/layers/population.jpg');
+}
+
+.layer-item:hover, .layer-item.active {
+  border-color: #007bff;
+}
+
+.layer-name {
+  margin-left: 10px;
   font-family: 'EB Garamond', serif;
-  color: #f4e8d3;
-  font-size: 14px;
+  color: #fffffe;
+  font-size: 16px;
+  position: relative;
+  z-index: 1;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5); /* Add a background for readability */
+  border-radius: 10px;
+}
+
+.map-page-submenu {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.map-submenu-icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #422f0b;
+  font-size: 24px;
+  transition: color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.map-submenu-icon-button.active {
+  color: #007bff;
+}
+
+.map-submenu-icon-button:hover {
+  color: #007bff;
+  transform: translateY(-3px);
 }
 
 .map-container {
@@ -134,11 +205,13 @@
   align-items: center;
   justify-content: center;
   color: #333;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .map-page-icon-button:hover {
   background-color: #007bff;
 }
+
+
 
 

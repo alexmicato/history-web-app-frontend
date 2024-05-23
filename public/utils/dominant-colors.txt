@@ -1,0 +1,4 @@
+blue:#007bff;
+white:#f0f0f0;
+brown:rgba(244, 232, 211, 0.8);
+darker brown:#422f0b;

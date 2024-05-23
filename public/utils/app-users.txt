@@ -1,0 +1,16 @@
+username: napoleon
+email: napoleon@napoleon.com
+pass: Napoleon23!
+
+username: carol
+email: carol@carol.com
+pass: Carol23!
+
+username: radu
+email:radu@radu.com
+pass:Raduradu23!
+
+Admin:
+username:admin
+email:admin@admin.com
+pass: adminpass

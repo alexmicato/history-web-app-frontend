@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './TimelineComponent.css';
+import { RiArrowLeftDoubleFill, RiArrowRightDoubleFill } from "react-icons/ri";
 
 const TimelineComponent = ({ years, currentYear, onYearChange }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -59,7 +60,7 @@ const TimelineComponent = ({ years, currentYear, onYearChange }) => {
   return (
     <div className="timeline-container">
       <button className="timeline-control left" onClick={handlePrev} disabled={currentIndex === 0} >
-        &lt;
+        <RiArrowLeftDoubleFill />
       </button>
       <div className="timeline" ref={timelineRef} style={{ display: isHidden ? 'none' : 'flex' }}>
         <div className="timeline-content">
@@ -76,7 +77,7 @@ const TimelineComponent = ({ years, currentYear, onYearChange }) => {
         </div>
       </div>
       <button className="timeline-control right" onClick={handleNext} disabled={currentIndex === years.length - 1}>
-        &gt;
+        <RiArrowRightDoubleFill />
       </button>
       <div className="timeline-controls">
         <select 

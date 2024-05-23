@@ -4,8 +4,9 @@ import "./MapPage.css";
 import Map from "../../components/map/Map";
 import { useNavigate } from 'react-router-dom';
 import TimelineComponent from "../../components/map/Utils/TimelineComponent"
-import { FaLayerGroup } from "react-icons/fa";
-import { FaHome } from "react-icons/fa";
+import { FaLayerGroup, FaHome, FaCity, FaHistory, FaUser } from "react-icons/fa";
+import { MdHistoryEdu } from "react-icons/md";
+import { GiCaesar, GiGreekTemple, GiOpenBook  } from "react-icons/gi";
 
 const years = [
   -123000, -10000, -8000, -5000, -4000, -3000, -2000, -1500, -1000, -700, -500,
@@ -22,6 +23,8 @@ const layers = {
   POPULATION_DENSITY: "populationDensity",
 
 };
+
+
 
 const MapPage = () => {
 
@@ -42,7 +45,14 @@ const MapPage = () => {
 
   const handleYearChange = (year) => setCurrentYear(year);
 
-  const handleLayerChange = (layer) => setCurrentLayer(layer);
+  const handleLayerChange = (layer) => {
+    setCurrentLayer(layer);
+    if (layer === layers.POLITICAL) {
+      setShowPoliticalOptions(!showPoliticalOptions);
+    } else {
+      setShowPoliticalOptions(false);  // Close the political options if another layer is selected
+    }
+  };
 
   return (
     <div className="map-page-container">
@@ -60,38 +70,34 @@ const MapPage = () => {
       </div>
       {showSidebar && (
         <div className="sidebar">
-          <button className="back-button" onClick={navigateToMain}>Back to Main</button>
-          <h2>Layers</h2>
+          <h2>Map Layers</h2>
           <div className="layer-options">
-            <button onClick={() => setShowPoliticalOptions(!showPoliticalOptions)}>Political Map</button>
+          <div className={`layer-item political ${currentLayer === layers.POLITICAL ? 'active' : ''}`} onClick={() => handleLayerChange(layers.POLITICAL)}>
+              <span className="layer-name">Political</span>
+            </div>
             {showPoliticalOptions && (
-              <div className="submenu">
-                <label>
-                  <input type="checkbox" checked={showCities} onChange={(e) => setShowCities(e.target.checked)} /> Cities
-                </label>
-                <label>
-                  <input type="checkbox" checked={showEvents} onChange={(e) => setShowEvents(e.target.checked)} /> Historical Events
-                </label>
-                <label>
-                  <input type="checkbox" checked={showFigures} onChange={(e) => setShowFigures(e.target.checked)} /> Historical Figures
-                </label>
+              <div className="map-page-submenu">
+                <button className={`map-submenu-icon-button ${showCities ? 'active' : ''}`} onClick={() => setShowCities(!showCities)} title="Show Cities">
+                  <GiGreekTemple />
+                </button>
+                <button className={`map-submenu-icon-button ${showEvents ? 'active' : ''}`} onClick={() => setShowEvents(!showEvents)} title="Show Events">
+                  <GiOpenBook />
+                </button>
+                <button className={`map-submenu-icon-button ${showFigures ? 'active' : ''}`} onClick={() => setShowFigures(!showFigures)} title="Show Figures">
+                  <GiCaesar />
+                </button>
               </div>
             )}
+            <div className={`layer-item cultural ${currentLayer === layers.CULTURAL ? 'active' : ''}`} onClick={() => handleLayerChange(layers.CULTURAL)}>
+              <span className="layer-name">Cultural</span>
+            </div>
+            <div className={`layer-item religious ${currentLayer === layers.RELIGIOUS ? 'active' : ''}`} onClick={() => handleLayerChange(layers.RELIGIOUS)}>
+              <span className="layer-name">Religious</span>
+            </div>
+            <div className={`layer-item population ${currentLayer === layers.POPULATION_DENSITY ? 'active' : ''}`} onClick={() => handleLayerChange(layers.POPULATION_DENSITY)}>
+              <span className="layer-name">Population</span>
+            </div>
           </div>
-          <div className="layer-options">
-            <button onClick={() => setShowCulturalOptions(!showCulturalOptions)}>Cultural Maps</button>
-            {showCulturalOptions && (
-              <div className="submenu">
-                <label>
-                  <input type="checkbox" onChange={() => handleLayerChange(layers.CULTURAL)} /> Culture
-                </label>
-                <label>
-                  <input type="checkbox" onChange={() => handleLayerChange(layers.LANGUAGE)} /> Language
-                </label>
-              </div>
-            )}
-          </div>
-          {/* Add more layers as needed */}
         </div>
       )}
       <div className="timeline-wrapper">

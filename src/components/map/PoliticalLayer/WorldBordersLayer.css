@@ -1,64 +1,64 @@
-.leaflet-popup .leaflet-popup-content-wrapper {
-    background-color: rgba(253, 244, 227, 0.9); /* Semi-transparent background */
-    border-radius: 2px; /* Consistent with your theme */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
+
+/* Main popup container */
+.leaflet-popup {
+  border: 2px solid #422f0b;;
+  box-shadow: 0 4px 8px rgba(10, 174, 81, 0.1);
+  border-radius: 5px;
+  padding: 0;
+  max-height: 150px;
 }
 
-.leaflet-popup .leaflet-popup-content {
-    margin: 0; /* Override default Leaflet styles if necessary */
-    font-family: 'EB Garamond', serif;
-    color: #433320;
-    padding: 16px; /* Add padding to make the popup larger */
+/* Content wrapper */
+.leaflet-popup-content-wrapper {
+  background-color: rgba(244, 232, 211, 0.9);
+  padding: 10px;
+  border-radius: 5px;
+  padding: 0;
+  max-height: 150px;
 }
 
-.leaflet-popup .leaflet-popup-content h3,
-.leaflet-popup .leaflet-popup-content p {
-  padding: 0 8px; /* Keep horizontal padding for alignment */
-  margin: 0; /* This removes the default margin of headers and paragraphs */
+/* Content area */
+.leaflet-popup-content {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  display: flex;
+  align-items: center; /* Center align the content */
+  max-height: 150px;
 }
 
+/* Inner custom content */
+.popup-inner {
+  display: flex;
+  align-items: center;
+}
 
+/* Image styling */
+.popup-image img {
+  width: 80px;
+  height: 100px;  
+  margin-right: 5px;
+  object-fit: cover; /* Ensures the image covers the full area */
+}
+
+/* Text styling */
+.popup-text {
+  padding-left: 10px;
+  flex: 1;
+}
+
+/* Hide the default arrow */
 .leaflet-popup-tip-container {
-    display: none; /* Hides the default popup tip */
-  }
-  
-  .leaflet-popup::before {
-    content: '\f276'; /* Unicode for the Font Awesome map-pin icon */
-    font-family: 'Font Awesome 5 Free'; /* Ensure this matches the Font Awesome version you are using */
-    font-weight: 900; /* Needed for solid icons in Font Awesome 5 */
-    display: block;
-    text-align: center;
-    position: absolute;
-    top: -30px; /* Adjust this value based on the size of your icon and new padding */
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 24px; /* You can adjust the size as needed */
-    color: #750404; /* Match this color to your map theme or icon color */
-    pointer-events: none; /* Makes sure clicks on the icon don't interfere with map interaction */
-    font-size: 30px;
-}
-  
-  /* If you need to override the close button styles as well */
-  .leaflet-popup-close-button {
-    color: #5c4830; /* Adjust close button color to match theme */
-    font-size: 24px;
-  }
-  
-  /* Applying the same border and shadow to the entire popup, including tip */
-  .leaflet-popup {
-    border: 1px solid #aa8a72;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .city-popup .leaflet-popup-content-wrapper {
-    background-color: rgba(100, 149, 237, 0.9); /* Light blue background */
-    color: #fff; /* White text */
+  display: none;
 }
 
-.city-popup .leaflet-popup-content {
-    font-family: 'Arial', sans-serif;
+/* Custom close button */
+.leaflet-popup-close-button {
+  color: #5c4830;
+  font-size: 16px;
 }
+
 
 .country-label {
   font-weight: bold;

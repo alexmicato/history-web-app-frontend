@@ -67,7 +67,7 @@ const WorldBordersGeoJSON = ({ year, showCities, showEvents, showFigures, zoomLe
     };
   
     fetchDataAsync();
-  }, [year, showCities, showEvents]);
+  }, [year, showCities, showEvents, showFigures]);
 
   useEffect(() => {
     addCountryLabels(geoJsonData);
@@ -158,15 +158,19 @@ const WorldBordersGeoJSON = ({ year, showCities, showEvents, showFigures, zoomLe
     if (feature.properties.NAME) {
       // Country popup
       const countryInfo = `
-        <div class="popup-content">
-          <h3>${feature.properties.NAME}</h3>
-          <p><b>Abbreviation:</b> ${feature.properties.ABBREVN}</p>
-          <p><b>Subject:</b> ${feature.properties.SUBJECTO}</p>
+        <div class="popup-inner">
+          <div class="popup-image">
+            <img src="${feature.properties.imageUrl || '/assets/images/backgrounds/markers/generic/country.jpg'}" alt="Location">
+          </div>
+          <div class="popup-text">
+            <h3>${feature.properties.NAME}</h3>
+            <p><b>Abbreviation:</b> ${feature.properties.ABBREVN}</p>
+            <p><b>Subject:</b> ${feature.properties.SUBJECTO}</p>
+          </div>
         </div>
       `;
       layer.bindPopup(countryInfo, { minWidth: 300, maxWidth: 400 });
-    
-    } 
+    }
   };
 
   const ensurePolygonValidity = (polygon) => {
@@ -210,8 +214,8 @@ const WorldBordersGeoJSON = ({ year, showCities, showEvents, showFigures, zoomLe
 
         const visibilityThresholds = [
           { zoom: 7, area: 1e8},
-          { zoom: 6, area: 1e9 },
-          { zoom: 5, area: 1e10 },
+          { zoom: 6, area: 4e10 },
+          { zoom: 5, area: 1e11 },
           { zoom: 4, area: 1e11 },
           { zoom: 3, area: 1e12 },
           { zoom: 2, area: 5e12 },
