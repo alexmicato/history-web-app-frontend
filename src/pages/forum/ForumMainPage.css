@@ -1,0 +1,88 @@
+.forum-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.forum-banner img {
+    width: 100%;
+    height: auto;
+}
+
+.forum-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f4f4f4;
+}
+
+.forum-content {
+    display: flex;
+    margin-top: 20px;
+}
+
+.forum-sidebar {
+    flex: 1;
+    padding: 20px;
+    background-color: #e9ecef;
+}
+
+.forum-sidebar h4 {
+    margin-top: 0;
+}
+
+.forum-main {
+    flex: 3;
+    padding: 20px;
+}
+
+.create-post-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: block; /* Make it a block to fill the container */
+    width: 50%;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.create-post-btn:hover {
+    background-color: #0056b3;
+}
+
+.forum-footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+    margin-top: auto; /* Push the footer to the bottom */
+}
+
+.forum-main article {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.forum-main button {
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.forum-main footer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 10px;
+}
+
+.forum-main footer small {
+    margin: 2px 0;
+}

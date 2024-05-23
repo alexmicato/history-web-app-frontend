@@ -1,0 +1,54 @@
+/* PostPage.css */
+.post-container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-details {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.post-content {
+    margin-bottom: 30px;
+}
+
+.post-comments {
+    margin-top: 40px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.comment {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+
+.add-comment {
+    margin-top: 20px;
+}
+
+.add-comment input {
+    width: 80%;
+    padding: 8px;
+    margin-right: 10px;
+}
+
+.add-comment button {
+    padding: 8px 15px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.add-comment button:hover{
+    background-color: #218dff;
+}

@@ -1,0 +1,106 @@
+
+.submit-button, .register-button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: none;
+    color: var(--neutral-dark); /* Onyx for text, ensuring readability */
+    background-color: #c89868d7; /* Old Burgundy for the button background */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'EB Garamond', 'Times New Roman', serif;
+}
+
+.submit-button:hover {
+    background-color: #a57b51; /* A darker shade of Old Burgundy for hover state */
+}
+
+.login-container {
+    max-width: 300px;
+    min-height: 300px;
+    width: 300px;
+    background-color: rgba(243, 219, 191, 0.95); /* Raw Umber */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.login-container h2 {
+    text-align: center; /* Centers the text */
+    font-family: 'Garamond', 'Times New Roman', serif; /* Specifies the font */
+    color: #5d3d1f; /* Sets the text color */
+    font-size: 30px; /* Adjusts the size of the font */
+    font-weight: bold; /* Makes the font bold */
+    margin-bottom: 20px; /* Adds space below the heading */
+
+}
+
+.login-page-container {
+    position: relative;
+    height: 100vh;
+    background-image: url('../../../public/assets/images/backgrounds/map2.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid var(--neutral-dark); /* Onyx for contrast */
+    box-sizing: border-box;
+    background-color: var(--primary-color); /* Antique White */
+    font-family: 'EB Garamond', 'Times New Roman', serif;
+    font-size: 13px;
+    color: var(--neutral-dark); /* Onyx for text color */
+}
+
+.input-field:focus {
+    outline: none;  /* Removes the default focus outline */
+    border: 2px solid var(--accent-color); /* Highlights the border of the focused input */
+    box-shadow: 0 0 5px var(--accent-color); /* Optional: Adds a glow effect to the focused input */
+}
+
+/* Ensuring that non-focused inputs do not change appearance */
+.input-field:not(:focus) {
+    opacity: 1; /* Ensures full opacity */
+    filter: none; /* Removes any filters that might be causing blurring */
+}
+
+.error-message {
+    color: #D32F2F; /* This color remains for error visibility */
+    margin-bottom: 0;
+    min-height: 20px;
+}
+
+.register-button {
+    width: 100%;
+    padding: 12px; /* Increased padding for a larger button */
+    margin-top: 20px; /* Increased margin-top for spacing */
+    border-radius: 5px;
+    border: none;
+    color: #353839; /* Light color for the text */
+    background-color: #c89868d7; /* A color picked from the map for the buttons */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Lato', sans-serif; /* A clean font for button text */
+}
+
+.register-button:hover {
+    background-color: #a57b51;  /* A darker shade for hover state */
+}
+
+
+

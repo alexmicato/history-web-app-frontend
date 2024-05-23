@@ -1,0 +1,94 @@
+.timeline-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #f0f0f0; /* Background color */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    height: 60px; /* Adjust height as needed */
+    overflow: hidden; /* Hide overflow */
+  }
+  
+  .timeline-control {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+  }
+  
+  .timeline-control:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .timeline {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    flex-grow: 1;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .timeline::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+  }
+  
+  .timeline-content {
+    display: flex;
+    gap: 10px; /* Add space between items */
+  }
+  
+  .timeline-item {
+    display: inline-block; /* Inline-block to prevent wrapping */
+    text-align: center;
+    font-size: 1em;
+    padding: 10px;
+    color: #000;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .timeline-item.active {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .timeline-item:not(.active) {
+    opacity: 0.5;
+    transform: scale(0.9);
+  }
+  
+  .timeline-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-left: 20px; /* Space between timeline and controls */
+  }
+  
+  .jump-select {
+    padding: 5px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .jump-button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+  }
+  
+  .jump-button:hover {
+    background: #0056b3;
+  }
+  

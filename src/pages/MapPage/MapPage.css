@@ -1,0 +1,144 @@
+@import url("~leaflet/dist/leaflet.css");
+
+.map-page-container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  padding: 20px;
+  box-sizing: border-box; 
+  overflow: hidden;
+}
+
+.layers-button {
+  position: absolute;
+  top: 100px;
+  left: 10px;
+  background: #fff;
+  border: 2px solid #aaa6a3;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.map-layer-icon-container {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: inline-flex; /* Ensures the icon is centered vertically */
+  align-items: center;  /* Centers the icon vertically */
+  justify-content: center; /* Centers the icon horizontally */
+}
+
+.map-layer-icon-container svg {
+  color: #333; /* Adjust icon color */
+}
+
+.sidebar {
+  position: absolute;
+  top: 10px;
+  left: 60px; /* Adjusted to leave space for the button */
+  height: calc(100% - 20px); /* Adjust for padding */
+  width: 250px;
+  background-color: rgba(69, 57, 50, 0.9); 
+  color: #f4e8d3; 
+  padding: 20px;
+  border-right: 2px solid #8a7f78; 
+  overflow-y: auto;
+  z-index: 999;
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.sidebar .layer-options {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.sidebar .submenu {
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.layer-options button, .back-button {
+  background-color: #6e6658; /* Old paper style for buttons */
+  color: #f4e8d3; /* Parchment text color */
+  border: 1px solid #746a64; /* Darker border for definition */
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.layer-options button:hover, .back-button:hover {
+  background-color: #8a7f78; /* Lighter parchment on hover */
+}
+
+.submenu label {
+  font-family: 'EB Garamond', serif;
+  color: #f4e8d3;
+  font-size: 14px;
+}
+
+.map-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #c9ada7; /* Soft pink/peach - replace with suitable parchment texture */
+}
+
+.timeline-wrapper {
+  position: absolute;
+  bottom:10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 40px); /* Adjust for padding */
+  z-index: 500;
+  background-color: rgba(244, 232, 211, 0.8); /* Light parchment color with transparency */
+  padding: 5px 0; /* Reduced padding */
+  border-bottom: 1px solid #8a7f78; /* Reduced border thickness */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Reduced shadow */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.map-page-icon-container {
+  position: absolute;
+  top: 100px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+  background-color: rgba(244, 232, 211, 0.8);
+  padding: 3px;
+  border: 2px solid #aaa6a3; /* Optional: add a border to the container */
+  border-radius: 4px;
+}
+
+.map-page-icon-button {
+  background: #f0f0f0;
+  border: 2px solid #aaa6a3;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-size: 12px;
+}
+
+.map-page-icon-button:hover {
+  background-color: #007bff;
+}
+
+

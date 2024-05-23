@@ -1,0 +1,35 @@
+/* styles/ArticlesPage.css */
+
+.articles-navbar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.articles-navbar input {
+    flex-grow: 1;
+    padding: 8px;
+}
+
+.articles-navbar button {
+    padding: 8px 16px;
+}
+
+.article-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.article-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.article-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}

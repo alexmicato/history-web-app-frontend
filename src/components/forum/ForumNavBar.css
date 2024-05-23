@@ -1,0 +1,22 @@
+/* NavBar.css */
+.forum-navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: #333;
+    color: white;
+}
+
+.forum-navbar button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.forum-navbar input {
+    padding: 8px;
+    width: 200px; /* or any other suitable width */
+}

@@ -1,0 +1,10 @@
+/* Footer.css */
+.forum-footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative; /* or 'fixed' to stick at the bottom */
+    bottom: 0;
+    width: 100%;
+}

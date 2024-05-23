@@ -1,0 +1,26 @@
+.article-content {
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.article-content table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.article-content table, 
+.article-content th, 
+.article-content td {
+    border: 1px solid #ddd;
+}
+
+.article-content th, 
+.article-content td {
+    padding: 8px;
+    text-align: left;
+}
+
+.article-content img {
+    max-width: 100%;
+    height: auto;
+}

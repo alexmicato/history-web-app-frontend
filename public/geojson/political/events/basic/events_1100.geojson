@@ -1,0 +1,38 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"eventType": "battle",
+				"name": "Battle of Hastings",
+				"date": "14 October 1466",
+				"description":"William the Conqueror defeats the Anglo-Saxon king Harold Godwinson and begins the Norman Conquest of England"
+			},
+			"geometry": {
+				"coordinates": [
+					0.48,
+					50.92
+				],
+				"type": "Point"
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"eventType":"events",
+				"name":"The Great Schism",
+				"date":"16 July 1054",
+				"description":"Break of communion between Catholic and Eastern Orthodox Churches"
+			},
+			"geometry": {
+				"coordinates": [
+					12.503419292075563,
+					41.861857086167677
+				],
+				"type": "Point"
+			},
+			"id": 1
+		}
+	]
+}

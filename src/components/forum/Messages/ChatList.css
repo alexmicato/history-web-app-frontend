@@ -1,0 +1,40 @@
+.chat-list {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.chat-item {
+    margin-bottom: 10px;
+}
+
+.chat-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+}
+
+.chat-name {
+    font-weight: bold;
+}
+
+.chat-timestamp {
+    font-size: 0.8em;
+    color: #666;
+}
+
+/* Add new styles for new messages */
+.new-message .chat-link {
+    background-color: #e0f7fa;  /* Light blue to indicate new messages */
+    font-weight: bold; /* Make text bold to highlight */
+    border-left: 5px solid #009688; /* Add a solid bar to the left for visibility */
+}
+
+.new-message .chat-name {
+    color: #00695c; /* Darker text for emphasis */
+}

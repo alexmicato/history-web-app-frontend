@@ -1,0 +1,25 @@
+
+.registration-container {
+    max-width: 300px;
+    min-height: 300px;
+    width: 300px;
+    background-color: rgba(243, 219, 191, 0.95); /* Raw Umber */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.registration-container h2 {
+    text-align: center; /* Centers the text */
+    font-family: 'Garamond', 'Times New Roman', serif; /* Specifies the font */
+    color: #5d3d1f; /* Sets the text color */
+    font-size: 30px; /* Adjusts the size of the font */
+    font-weight: bold; /* Makes the font bold */
+    margin-bottom: 20px; /* Adds space below the heading */
+
+}
