@@ -1,0 +1,12 @@
+.user-link {
+    text-decoration: none; /* Remove underline */
+    font-size: 1.2rem; /* Make the text larger */
+    font-weight: bold; /* Make the text bolder */
+    color: #007bff; /* Set a custom color */
+    transition: color 0.3s;
+  }
+  
+  .user-link:hover {
+    color: #0056b3; /* Change color on hover */
+  }
+  

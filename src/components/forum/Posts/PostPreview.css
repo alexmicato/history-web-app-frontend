@@ -1,0 +1,47 @@
+/* PostPreview.css */
+.article-container {
+    background-color: #f0f0f0; /* Light grey background for each post */
+    border: 1px solid #dee2e6; /* Subtle border */
+    padding: 20px;
+    margin-bottom: 20px; /* Space between posts */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow for depth */
+}
+
+.post-title {
+    color: #007bff; /* Blue for titles to make them stand out */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #333; /* Corrected to include 'solid' and use a dark color for contrast */
+}
+
+.article-container .post-content {
+    color: #495057; /* Dark grey for text */
+    font-size: 16px; /* Slightly larger font for readability */
+    margin-bottom: 15px;
+}
+
+.article-container button {
+    background-color: #007bff; /* Bootstrap primary blue */
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.article-container button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.article-container footer {
+    font-size: 14px; /* Smaller font size for meta information */
+    color: #6c757d; /* Grey color for less emphasis */
+    display: flex;
+    justify-content: space-between; /* Space out footer content */
+    margin-top: 15px;
+}
+
+.article-container footer small {
+    display: block; /* Ensure small tags are on new lines */
+}

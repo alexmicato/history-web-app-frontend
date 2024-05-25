@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { fetchCategories } from '../../services/CategoryService';
 import axios from "axios";
+import './ForumSidebar.css'
+import { MdPostAdd } from "react-icons/md";
 
 function ForumSidebar() {
     const navigate = useNavigate();
@@ -43,6 +45,9 @@ function ForumSidebar() {
 
     return (
         <aside className="forum-sidebar">
+            <button onClick={() => handleNavigation('/create-post')} className="create-post-btn">
+                <MdPostAdd /> Create Post
+            </button>
             <h4>Categories</h4>
             <ul>
                 {categories.map((category) => (
@@ -59,9 +64,6 @@ function ForumSidebar() {
                     </li>
                 ))}
             </ul>
-            <button onClick={() => handleNavigation('/create-post')} className="create-post-btn">
-                Create Post
-            </button>
         </aside>
     );
 }

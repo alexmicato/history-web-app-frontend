@@ -1,22 +1,57 @@
-/* NavBar.css */
 .forum-navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0 20px;
     background-color: #333;
     color: white;
+    position: relative; 
+    
 }
 
-.forum-navbar button {
+.forum-nav-buttons, .forum-user-controls, .forum-search-icon {
+    display: flex;
+    align-items: center;
+}
+
+.forum-navbar button, .forum-search-icon {
     background: none;
-    border: none;
+    border: 1px solid white;
     color: white;
     cursor: pointer;
-    padding: 10px;
+    padding: 10px 15px;
     font-size: 16px;
+    margin-right: 10px;
 }
 
-.forum-navbar input {
-    padding: 8px;
-    width: 200px; /* or any other suitable width */
+.search-popup {
+    display: flex;
+    position: absolute;
+    top: 100%; /* Positioning below the navbar */
+    right: 0;
+    background-color: #fff; /* Contrasting background */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.25); /* Adding some shadow for pop-up effect */
+    border: 1px solid #ccc;
+    padding: 15px;
+    z-index: 1000; /* Ensuring it's above other content */
+}
+
+.search-popup input {
+    padding: 10px;
+    margin-right: 10px; /* Space between input and search button */
+    width: 250px; /* Adjust width as needed */
+    border: 1px solid #ccc; /* Subtle border for the input */
+}
+
+.search-popup button {
+    background-color: #007BFF; /* Bootstrap primary blue for visibility */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.search-popup button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
 }

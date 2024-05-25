@@ -8,6 +8,8 @@ import Footer from '../../components/forum/ForumFooter';
 import UserLink from '../../components/forum/User/UserLink';
 import { fetchCategories } from '../../services/CategoryService';
 import ForumSidebar from '../../components/forum/ForumSidebar';
+import PostPreview from '../../components/forum/Posts/PostPreview';
+import { TbArrowsSort } from "react-icons/tb";
 
 function ForumMainPage()
 {
@@ -16,6 +18,8 @@ function ForumMainPage()
     const [page, setPage] = useState(0);
     const [totalPages, setTotalPages] = useState(0);
     const [categories, setCategories] = useState([]);
+    const [sortDirection, setSortDirection] = useState('desc');
+    const [isSticky, setIsSticky] = useState(false);
     const pageSize = 10; 
 
     useEffect(() => {
@@ -23,7 +27,7 @@ function ForumMainPage()
             try {
                 const fetchedCategories = await fetchCategories();
                 setCategories(fetchedCategories);
-                const response = await axios.get(`http://localhost:8080/posts?page=${page}&size=${pageSize}&sort=${encodeURIComponent('createdAt,desc')}`, {
+                const response = await axios.get(`http://localhost:8080/posts?page=${page}&size=${pageSize}&sort=${encodeURIComponent('createdAt,' + sortDirection)}`, {
                     headers: {
                         'Authorization': `Bearer ${localStorage.getItem('authToken')}`
                     }
@@ -37,7 +41,12 @@ function ForumMainPage()
         };
 
         loadInitialData();
-    }, [page]);
+    }, [page, sortDirection]);
+
+
+    const toggleSortDirection = () => {
+        setSortDirection(prevDirection => prevDirection === 'desc' ? 'asc' : 'desc');
+    };
 
     const handleNavigation = (path) => {
         navigate(path);
@@ -60,35 +69,14 @@ function ForumMainPage()
             <div className='forum-content'>
                 <ForumSidebar />
                 <main className='forum-main'>
-                    {posts.map(post => (
-                    <article key={post.id}>
-                        <h2>{post.title}</h2>
-                        <div
-                            className="post-content"
-                            dangerouslySetInnerHTML={{ __html: post.content.substring(0, 100)+"..." }}
-                        ></div>
-                        <button onClick={() => handleNavigation(`/post/${post.id}`)}>
-                            Read more
-                        </button>
-                        <footer>
-                            <div>
-                                <small>Posted by <UserLink username={post.username || "Unknown"} /> on {new Date(post.createdAt).toLocaleDateString()}</small>
-                            </div>
-                            <div>
-                                <small> Category: {post.category}</small>
-                            </div>
-                            <div>
-                            <div>
-                                <small>{post.commentCount} Comments | {post.likesCount} Likes</small>
-                            </div>
-                            </div>
-                        </footer>
-                    </article>
-                    ))}
-                <div className="pagination-controls">
-                        <button onClick={previousPage} disabled={page === 0}>Previous</button>
-                        <span>Page {page + 1} of {totalPages}</span>
-                        <button onClick={nextPage} disabled={page + 1 >= totalPages}>Next</button>
+                    <button onClick={toggleSortDirection}>
+                        Sort <TbArrowsSort />
+                    </button>
+                    {posts.map(post => <PostPreview key={post.id} post={post} />)}
+                    <div className="pagination-controls">
+                            <button onClick={previousPage} disabled={page === 0}>Previous</button>
+                            <span>Page {page + 1} of {totalPages}</span>
+                            <button onClick={nextPage} disabled={page + 1 >= totalPages}>Next</button>
                     </div>
                 </main>
             </div>

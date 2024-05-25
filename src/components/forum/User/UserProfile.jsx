@@ -2,6 +2,11 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useUser } from "../../../contexts/UserContext";
+import './UserProfile.css';
+import PostPreview from '../Posts/PostPreview';
+import { FiMoreVertical } from "react-icons/fi";
+import { IoMdSettings } from "react-icons/io";
+import { SiGooglemessages } from "react-icons/si";
 
 function UserProfile({ username }) {
     const [userData, setUserData] = useState({
@@ -12,7 +17,7 @@ function UserProfile({ username }) {
     const { user, logoutUser } = useUser();
     const isLoggedUser = user && user.username === username;
     const navigate = useNavigate(); 
-
+    const [showOptions, setShowOptions] = useState(false);
     const [userPosts, setUserPosts] = useState([]);
     const [page, setPage] = useState(0);
     const [totalPages, setTotalPages] = useState(0);
@@ -75,42 +80,38 @@ function UserProfile({ username }) {
 
     return (
         <div className="profile-info">
-            <img src={userData.profileImageUrl} alt={`${userData.username}'s profile`} style={{ width: 100, height: 100 }} />
-            <h2>{userData.username}</h2>
-            {isLoggedUser ? (
-                <>
-                    <button className="btn btn-primary" onClick={() => handleNavigation(`/messages/${user.username}`)}>See chats</button>
-                    <button className="btn btn-primary" onClick={() => handleNavigation(`/settings/${user.username}`)}>Settings</button>
-                </>
-            ) : (
-                <button className="btn btn-primary" onClick={() => handleNavigation(`/messages/${userData.username}`)}>Send PM</button>
-            )}
-            <main className='user-posts'>
-                    {userPosts.map(post => (
-                    <article key={post.id}>
-                        <h2>{post.title}</h2>
-                        <p>{post.content.substring(0, 100)}...</p>
-                        <button onClick={() => handleNavigation(`/post/${post.id}`)}>
-                            Read more
-                        </button>
-                        <footer>
-                            <div>
-                                <small> Category: {post.category}</small>
-                            </div>
-                            <div>
-                            <div>
-                                <small>{post.commentCount} Comments | {post.likesCount} Likes</small>
-                            </div>
-                            </div>
-                        </footer>
-                    </article>
-                    ))}
+            <div className="profile-header">
+                <div className="profile-image">
+                    <h2>{userData.username}</h2>
+                    <img src={userData.profileImageUrl} alt={`${userData.username}'s profile`} style={{ width: 100, height: 100 }} />
+                </div>
+                <div className="user-profile-options">
+                    <button onClick={() => setShowOptions(!showOptions)} className="options-button">
+                        <FiMoreVertical />
+                    </button>
+                    {showOptions && (
+                        <div className="user-profile-options-menu">
+                            {isLoggedUser ? (
+                            <>
+                                <button onClick={() => handleNavigation(`/messages/${user.username}`)}><SiGooglemessages /> See chats</button>
+                                <button onClick={() => handleNavigation(`/settings/${user.username}`)}><IoMdSettings /> Settings</button>
+                            </>
+                            ) : (
+                                <button onClick={() => handleNavigation(`/messages/${userData.username}`)}><SiGooglemessages /> Send PM</button>
+                            )}
+                        </div>
+                    )}
+                </div>
+            </div>
+            <main className='forum-main'>
+                <h1> User Posts</h1>
+                {userPosts.map(post => <PostPreview key={post.id} post={post} />)}
                 <div className="pagination-controls">
                         <button onClick={previousPage} disabled={page === 0}>Previous</button>
                         <span>Page {page + 1} of {totalPages}</span>
                         <button onClick={nextPage} disabled={page + 1 >= totalPages}>Next</button>
-                    </div>
-                </main>
+                </div>
+            </main>
         </div>
     );
 }

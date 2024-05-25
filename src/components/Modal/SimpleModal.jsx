@@ -8,7 +8,6 @@ function SimpleModal({ isOpen, onClose, children }) {
         <div className="modal-overlay" onClick={onClose}>
             <div className="modal-content" onClick={e => e.stopPropagation()}>
                 {children}
-                <button onClick={onClose}>Close</button>
                 <button className="modal-close-button" onClick={onClose}>Close</button>
             </div>
         </div>

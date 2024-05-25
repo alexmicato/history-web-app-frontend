@@ -1,0 +1,52 @@
+/* ForumSidebar.css */
+.forum-sidebar {
+    position: sticky;
+    top: 0;
+    max-height: calc(100vh - 50px);
+    overflow-y: auto;
+    width: 250px; /* Adjust width as needed */
+    background-color: #f0f0f0; /* Light grey background, adjust to match your theme */
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-right: 1px solid #dee2e6; /* Right border for a defined edge */
+    border-radius: 8px;
+}
+
+.forum-sidebar h4 {
+    color: #343a40; /* Dark shade for headings */
+    margin-bottom: 10px;
+}
+
+.forum-sidebar ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.forum-sidebar li {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    border-radius: 5px; /* Rounded corners for each list item */
+}
+
+.forum-sidebar li:hover {
+    background-color: #e9ecef; /* Light hover background */
+    color: #007bff; /* Highlight text on hover */
+}
+
+.create-post-btn {
+    display: block; /* Make the button extend full width of sidebar */
+    width: 100%;
+    padding: 10px 0;
+    background-color: #007bff; /* Primary color for button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.create-post-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}

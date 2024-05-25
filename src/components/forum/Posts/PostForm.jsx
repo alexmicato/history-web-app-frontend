@@ -3,6 +3,7 @@ import axios from "axios";
 import { fetchCategories } from "../../../services/CategoryService";
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import "./PostForm.css"
 
 function PostForm({
   initialTitle,
@@ -102,7 +103,9 @@ function PostForm({
           </option>
         ))}
       </select>
-      <button type="submit">Submit</button>
+      <div className="button-container">
+        <button type="submit">Submit</button>
+      </div>
     </form>
   );
 }

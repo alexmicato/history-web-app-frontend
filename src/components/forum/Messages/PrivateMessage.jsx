@@ -88,9 +88,11 @@ function PrivateMessage({ recipientUsername, refreshChats }) {
             <h1>Chat with {recipientUsername}</h1>
             <div className="messages">
                 {messages.map((msg, index) => (
-                    <p key={index}>{msg.sender}: {msg.content}</p>
+                    <div key={index} className={`message ${msg.sender === user.username ? 'message-sent' : 'message-received'}`}>
+                        <p>{msg.content}</p>
+                    </div>
                 ))}
-                <div ref={messagesEndRef} />
+                <div ref={messages.length ? messagesEndRef : null} />
             </div>
             <input
                 type="text"

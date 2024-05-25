@@ -4,12 +4,13 @@ import Header from '../../../components/forum/Banner'; // Import your Header com
 import NavBar from '../../../components/forum/ForumNavBar'; // Import your NavBar component
 import Footer from '../../../components/forum/ForumFooter'; // Import your Footer component
 import UserProfile from '../../../components/forum/User/UserProfile';
+import "./UserProfilePage.css"
 
 function UserProfilePage() {
     const { username } = useParams();
 
     return (
-        <div>
+        <div className='user-profile-page-container'>
             <Header />
             <NavBar />
             <main style={{ padding: "20px" }}>

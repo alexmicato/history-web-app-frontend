@@ -1,22 +1,39 @@
+/* ChatList.css */
 .chat-list {
     display: flex;
     flex-direction: column;
     padding: 10px;
+    background-color: #ffffff; /* Optional: Set a background color for the chat list */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds subtle shadow to the container */
+    border-radius: 8px; /* Rounded corners for the outer box */
+    max-width: 600px; /* Limiting max width for better readability */
+    margin: 20px auto; /* Centering the chat list */
 }
 
 .chat-item {
     margin-bottom: 10px;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.chat-item:hover {
+    transform: translateY(-3px); /* Slight raise effect on hover */
+    background-color: #f8f8f8; /* Light background color on hover */
 }
 
 .chat-link {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 15px;
     text-decoration: none;
     color: black;
     background-color: #f0f0f0;
     border-radius: 4px;
+    transition: background-color 0.3s; /* Smooth transition for background color change */
+}
+
+.chat-link:hover {
+    background-color: #e8e8e8; /* Slightly darker background on hover */
 }
 
 .chat-name {
@@ -28,13 +45,29 @@
     color: #666;
 }
 
-/* Add new styles for new messages */
 .new-message .chat-link {
-    background-color: #e0f7fa;  /* Light blue to indicate new messages */
+    background-color: #e0f7fa; /* Light blue to indicate new messages */
     font-weight: bold; /* Make text bold to highlight */
     border-left: 5px solid #009688; /* Add a solid bar to the left for visibility */
 }
 
 .new-message .chat-name {
     color: #00695c; /* Darker text for emphasis */
+}
+
+/* Responsive design for smaller devices */
+@media (max-width: 768px) {
+    .chat-list {
+        width: 100%; /* Full width on smaller screens */
+        padding: 5px;
+        box-shadow: none; /* Optional: remove shadow on smaller devices */
+    }
+
+    .chat-link {
+        padding: 10px; /* Smaller padding on smaller screens */
+    }
+
+    .chat-name, .chat-timestamp {
+        font-size: 0.9em; /* Adjust font size for readability on small devices */
+    }
 }

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import predefinedProfileImages from "../../../utils/images/PredefinedProfileImage";
+import './UserSettings.css';
 
 function UserSettings({ username }) {
   const [newUsername, setNewUsername] = useState(username);
@@ -178,71 +179,41 @@ function UserSettings({ username }) {
   };
 
   return (
-    <div style={{ display: "flex", justifyContent: "space-between" }}>
-      <div style={{ flex: 1, marginRight: "20px" }}>
+    <div className="settings-container">
+      <div className="settings-section">
         <h2>Update Your Profile</h2>
-        <form onSubmit={handleUsernameUpdate}>
-          <label>
-            Username:
-            <input
-              type="text"
-              value={newUsername}
-              onChange={handleUsernameChange}
-            />
-          </label>
-          {usernameError && <p style={{ color: "red" }}>{usernameError}</p>}
-          <button type="submit">Save Username</button>
+        <form onSubmit={handleUsernameUpdate} className="settings-form-group">
+          <label className="settings-label">Username:</label>
+          <input className="settings-input" type="text" value={newUsername} onChange={handleUsernameChange} />
+          {usernameError && <p className="error">{usernameError}</p>}
+          <button className="settings-submit-button" type="submit">Save Username</button>
         </form>
         <br />
-        <form onSubmit={handleProfilePicUpdate}>
-                    <label>Profile Picture:
-                        <input type="file" onChange={handleProfilePicChange} />
-                    </label>
-                    <div>
-                        <label>Or select a predefined picture:</label>
-                        <div style={{ display: 'flex', gap: '10px' }}>
-                            {predefinedProfileImages.map((img, index) => (
-                                <img
-                                    key={index}
-                                    src={img.url}
-                                    alt={`Predefined ${index}`}
-                                    style={{
-                                        width: '50px',
-                                        height: '50px',
-                                        cursor: 'pointer',
-                                        border: selectedPredefinedPic === img.url ? '2px solid blue' : 'none'
-                                    }}
-                                    onClick={() => setSelectedPredefinedPic(img.url)}
-                                />
-                            ))}
-                        </div>
-                    </div>
-                    <button type="submit">Save Profile Picture</button>
-      </form>
+        <form onSubmit={handleProfilePicUpdate} className="settings-form-group">
+          <label className="settings-label">Profile Picture:</label>
+          <input className="settings-input" type="file" onChange={handleProfilePicChange} />
+          <div className="predefined-pics-container">
+            {predefinedProfileImages.map((img, index) => (
+              <img key={index} src={img.url} alt={`Predefined ${index}`}
+                className={`predefined-pic ${selectedPredefinedPic === img.url ? 'selected' : ''}`}
+                onClick={() => setSelectedPredefinedPic(img.url)}
+              />
+            ))}
+          </div>
+          <button className="settings-submit-button" type="submit">Save Profile Picture</button>
+        </form>
       </div>
-      <div style={{ flex: 1 }}>
+      <div className="settings-section">
         <h2>Change Password</h2>
-        <form onSubmit={handlePasswordUpdate}>
-          <label>
-            Old Password:
-            <input
-              type="password"
-              value={oldPassword}
-              onChange={handleOldPasswordChange}
-            />
-          </label>
+        <form onSubmit={handlePasswordUpdate} className="settings-form-group">
+          <label className="settings-label">Old Password:</label>
+          <input className="settings-input" type="password" value={oldPassword} onChange={handleOldPasswordChange} />
           <br />
-          <label>
-            New Password:
-            <input
-              type="password"
-              value={newPassword}
-              onChange={handleNewPasswordChange}
-            />
-          </label>
+          <label className="settings-label">New Password:</label>
+          <input className="settings-input" type="password" value={newPassword} onChange={handleNewPasswordChange} />
           <br />
-          {passwordError && <p style={{ color: "red" }}>{passwordError}</p>}
-          <button type="submit">Save New Password</button>
+          {passwordError && <p className="error">{passwordError}</p>}
+          <button className="settings-submit-button" type="submit">Save New Password</button>
         </form>
       </div>
     </div>

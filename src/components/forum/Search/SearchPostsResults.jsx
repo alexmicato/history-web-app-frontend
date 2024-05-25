@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import UserLink from '../User/UserLink';
+import PostPreview from '../Posts/PostPreview';
 
 function useQuery() {
     return new URLSearchParams(useLocation().search);
@@ -49,29 +50,7 @@ function SearchPostsResults() {
     return (
         <div className="search-results-container">
             <h1>Search Results for "{query}"</h1>
-            {posts.map(post => (
-                <article key={post.id}>
-                    <h2>{post.title}</h2>
-                    <div
-                            className="post-content"
-                            dangerouslySetInnerHTML={{ __html: post.content.substring(0, 100)+"..." }}
-                     ></div>
-                    <button onClick={() => handleNavigation(`/post/${post.id}`)}>
-                        Read more
-                    </button>
-                    <footer>
-                        <div>
-                            <small>Posted by <UserLink username={post.username || "Unknown"} /> on {new Date(post.createdAt).toLocaleDateString()}</small>
-                        </div>
-                        <div>
-                            <small> Category: {post.category}</small>
-                        </div>
-                        <div>
-                            <small>{post.commentCount} Comments | {post.likesCount} Likes</small>
-                        </div>
-                    </footer>
-                </article>
-            ))}
+                {posts.map(post => <PostPreview key={post.id} post={post} />)}
             <div className="pagination-controls">
                 <button onClick={previousPage} disabled={page === 0}>Previous</button>
                 <span>Page {page + 1} of {totalPages}</span>
