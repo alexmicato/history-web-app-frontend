@@ -1,14 +1,64 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './MainPage.css';
+import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 // import headerImage from '../path-to/header-image.jpg'; // Replace with the path to the header image
 import { useUser } from '../../contexts/UserContext'
+import ArticleList from '../../components/Article/ArticleList';
+import { CgProfile } from "react-icons/cg";
+import { GiGreekTemple } from "react-icons/gi";
+import { CiLogout } from "react-icons/ci";
+import { MdOutlineArticle } from "react-icons/md";
+import { RiMapPinTimeLine } from "react-icons/ri";
+import { RiAdminLine } from "react-icons/ri";
 
 function MainPage() {
 
   const navigate = useNavigate();
   const { user, logoutUser } = useUser();
   const isAdmin = user && user.roles && user.roles.includes('ADMIN');
+  const [todayEvent, setTodayEvent] = useState(null);
+  const [loadingEvent, setLoadingEvent] = useState(true);
+  const [recentArticles, setRecentArticles] = useState([]);
+  const [loadingArticles, setLoadingArticles] = useState(true);
+
+  useEffect(() => {
+    const fetchTodayEvent = async () => {
+      try {
+        const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
+        const token = localStorage.getItem('authToken');
+        const response = await axios.get(`http://localhost:8080/articles/event-of-the-day?date=${today}`, {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        });
+        setTodayEvent(response.data || null);
+        setLoadingEvent(false);
+      } catch (error) {
+        console.error('Failed to fetch today\'s event:', error);
+        setLoadingEvent(false);
+      }
+    };
+
+    const fetchRecentArticles = async () => {
+      try {
+        const token = localStorage.getItem('authToken');
+        const response = await axios.get('http://localhost:8080/articles/recent', {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        });
+        setRecentArticles(response.data);
+        setLoadingArticles(false);
+      } catch (error) {
+        console.error('Failed to fetch recent articles:', error);
+        setLoadingArticles(false);
+      }
+    };
+
+    fetchTodayEvent();
+    fetchRecentArticles();
+  }, []);
 
   const handleLogout = () => {
     logoutUser(); // Clears user data from context and localStorage
@@ -21,43 +71,43 @@ function MainPage() {
 
   return (
     <div className="main-page">
-      <div className="header-image">
-        {/* You can place an <img> tag here or use a background image */}
-      </div>
+      <header className="site-header">
+        <h1 className="site-title">History Explorer</h1>
+      </header>
       <nav className="nav-bar">
-        <span className="nav-brand">History Explorer</span>
         <ul className="nav-items">
-          <li className="nav-item" onClick={() => handleNavigation('/map')} >Timeline</li>
-          <li className="nav-item" onClick={() => handleNavigation('/articles')} >Articles</li>
-          <li className="nav-item">Quizzes</li>
-          <li className="nav-item" onClick={() => handleNavigation('/forum')} >Forum</li>
-          {isAdmin && <li className="nav-item" onClick={() => handleNavigation('/admin')}>Admin</li>}
-          <li className="nav-item" onClick={handleLogout}>Logout</li>
+          <li className="nav-item" onClick={() => handleNavigation('/map')}><RiMapPinTimeLine /> Timeline</li>
+          <li className="nav-item" onClick={() => handleNavigation('/articles')}><MdOutlineArticle /> Articles</li>
+          <li className="nav-item" onClick={() => handleNavigation('/forum')}><GiGreekTemple /> Forum</li>
+          <li className='nav-item' onClick={() => navigate(`/users/${user.username}`)}><CgProfile /> Profile</li>
+          {isAdmin && <li className="nav-item" onClick={() => handleNavigation('/admin')}><RiAdminLine /> Admin</li>}
+          <li className="nav-item" onClick={handleLogout}><CiLogout /> Logout</li>
         </ul>
       </nav>
-      <div className="user-profile">
-      <button onClick={() => navigate(`/users/${user.username}`)}>Profile</button>
+      <div className="header-image">
+        {/* You can place an <img> tag here or use a background image */}
       </div>
       <div className="main-content">
         <div className="date-event-section">
           <h2>Today in History</h2>
-          <div className="event-item">
-            <h3>Event Name</h3>
-            <img src="path_to_event_image.jpg" alt="Event" />
-            <p>Click <a href="/link-to-full-article">here</a> for more details.</p>
-          </div>
+          {loadingEvent ? (
+            <p>Loading...</p>
+          ) : todayEvent ? (
+            <ArticleList articles={[todayEvent]} />
+          ) : (
+            <p>No events found for today.</p>
+          )}
         </div>
-      <div className="recent-articles-section">
-        <h2>Recent Articles</h2>
-        <ul>
-          <li className="article-item">
-            <h3>Article Title</h3>
-            <img src="path_to_article_image.jpg" alt="Article" />
-            <p>Click <a href="/link-to-article">here</a> to read.</p>
-          </li>
-          {/* Additional article items */}
-        </ul>
-    </div>
+        <div className="recent-articles-section">
+          <h2>Recent Articles</h2>
+          {loadingArticles ? (
+            <p>Loading...</p>
+          ) : recentArticles.length > 0 ? (
+            <ArticleList articles={recentArticles} />
+          ) : (
+            <p>No recent articles available.</p>
+          )}
+        </div>
       </div>
     </div>
   );

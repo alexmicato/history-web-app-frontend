@@ -1,35 +1,25 @@
 /* styles/ArticlesPage.css */
 
-.articles-navbar {
-    display: flex;
-    gap: 10px;
+.articles-page{
+    background-color: rgba(244, 232, 211, 0.8);
+    min-height: 150vh;
+}
+
+.create-article-button {
+    display: block; /* Make the button extend full width of sidebar */
+    width: 10%;
+    padding: 10px 0;
+    background-color: #007bff; /* Primary color for button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin:10px;
     margin-bottom: 20px;
+    margin-left: 50px;
 }
 
-.articles-navbar input {
-    flex-grow: 1;
-    padding: 8px;
-}
-
-.articles-navbar button {
-    padding: 8px 16px;
-}
-
-.article-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.article-item {
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.article-item img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
+.create-article-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
 }

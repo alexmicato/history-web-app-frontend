@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import "./AdminPage.css"
 
 function AdminPage() {
 
@@ -110,7 +111,7 @@ function AdminPage() {
     if (loading) return <div>Loading...</div>;
 
     return (
-        <div>
+        <div className='admin-page'>
             <button onClick={() => handleNavigation('/main')}>Home</button>
             <h1>Manage User Roles</h1>
             <div>

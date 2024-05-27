@@ -11,6 +11,8 @@ import SimpleModal from "../../Modal/SimpleModal";
 import { fetchCategories } from "../../../services/CategoryService";
 import { BiLike, BiSolidLike  } from "react-icons/bi";
 import { FiMoreVertical } from "react-icons/fi";
+import { MdEdit } from "react-icons/md";
+import { MdDelete } from "react-icons/md";
 
 function Post({ postId }) {
   const navigate = useNavigate();
@@ -312,8 +314,8 @@ function Post({ postId }) {
                   </button>
                   {showOptions && (
                     <div className="options-menu">
-                      <button onClick={() => setShowEditModal(true)}>Edit</button>
-                      <button onClick={() => handleDeletePost(postId)}>Delete</button>
+                      <button onClick={() => setShowEditModal(true)}><MdEdit /> Edit</button>
+                      <button onClick={() => handleDeletePost(postId)}><MdDelete /> Delete</button>
                     </div>
                   )}
                 </div>
@@ -388,14 +390,14 @@ function Post({ postId }) {
                             {showCommentOptions === comment.id && (
                               <div className="comment-options-menu">
                                 <button onClick={() => startEditing(comment)}>
-                                  Edit
+                                <MdEdit /> Edit
                                 </button>
                                 <button
                                   onClick={() =>
                                     handleDeleteComment(comment.id)
                                   }
                                 >
-                                  Delete
+                                  <MdDelete /> Delete
                                 </button>
                               </div>
                             )}

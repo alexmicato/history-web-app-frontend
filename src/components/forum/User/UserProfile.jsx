@@ -6,7 +6,7 @@ import './UserProfile.css';
 import PostPreview from '../Posts/PostPreview';
 import { FiMoreVertical } from "react-icons/fi";
 import { IoMdSettings } from "react-icons/io";
-import { SiGooglemessages } from "react-icons/si";
+import { MdMessage } from "react-icons/md";
 
 function UserProfile({ username }) {
     const [userData, setUserData] = useState({
@@ -93,11 +93,11 @@ function UserProfile({ username }) {
                         <div className="user-profile-options-menu">
                             {isLoggedUser ? (
                             <>
-                                <button onClick={() => handleNavigation(`/messages/${user.username}`)}><SiGooglemessages /> See chats</button>
+                                <button onClick={() => handleNavigation(`/messages/${user.username}`)}><MdMessage /> See chats</button>
                                 <button onClick={() => handleNavigation(`/settings/${user.username}`)}><IoMdSettings /> Settings</button>
                             </>
                             ) : (
-                                <button onClick={() => handleNavigation(`/messages/${userData.username}`)}><SiGooglemessages /> Send PM</button>
+                                <button onClick={() => handleNavigation(`/messages/${userData.username}`)}><MdMessage /> Send PM</button>
                             )}
                         </div>
                     )}

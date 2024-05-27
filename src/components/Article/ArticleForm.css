@@ -1,0 +1,97 @@
+.article-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.article-form label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+    color: #333333;
+}
+
+.article-form input[type="text"],
+.article-form input[type="url"],
+.article-form input[type="number"],
+.article-form input[type="date"],
+.article-form select,
+.article-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333333;
+    box-sizing: border-box;
+}
+
+.article-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.article-form .reference-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.article-form .reference-item input {
+    flex: 1;
+    padding: 10px;
+    margin-bottom: 0; /* Remove bottom margin to align with button */
+}
+
+.article-form .remove-reference-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Adjust padding to align with input fields */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: 40px; /* Ensure the height matches the input fields */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0; /* Remove bottom margin to align with inputs */
+}
+
+.article-form .remove-reference-button:hover {
+    background-color: #cc0000;
+}
+
+.article-form .add-reference-button,
+.article-form .submit-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    width: 100%; /* Ensure the buttons take full width */
+    font-size: 1em; /* Standardize font size */
+    text-align: center; /* Center the text */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.article-form .add-reference-button:hover,
+.article-form .submit-button:hover {
+    background-color: #0056b3;
+}
+
+.article-form .ck-editor__editable {
+    min-height: 300px;
+    max-height: 300px;
+    overflow-y: auto;
+}

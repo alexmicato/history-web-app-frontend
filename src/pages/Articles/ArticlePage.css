@@ -1,0 +1,40 @@
+.article-page-container {
+    background-color: rgba(244, 232, 211, 0.8);
+    min-height: 750px;
+    height: 100%; /* Full height of the parent */
+    width: 100%; /* Full width */
+    display: flex;
+    justify-content: flex-start; /* Align items at the top */
+    align-items: flex-start; /* Align items at the top */
+    padding: 20px; /* Optional padding for aesthetic spacing */
+}
+
+.article-page-sidebar
+{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin-right: 50px;
+    background-color: rgba(243, 219, 191, 0.95);
+    padding: 10px;
+    height: 95vh; /* Add padding at the bottom for internal space */
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+
+.article-page-back-button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+    margin-bottom: 20px; /* Add margin to separate from summary */
+}
+
+.article-page-back-button:hover {
+    background-color: #0056b3;
+}

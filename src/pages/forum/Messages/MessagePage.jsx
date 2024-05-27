@@ -6,6 +6,7 @@ import Header from '../../../components/forum/Banner';
 import PrivateMessage from '../../../components/forum/Messages/PrivateMessage';
 import ChatList from '../../../components/forum/Messages/ChatList';
 import {useUser} from '../../../contexts/UserContext'
+import "./MessagePage.css";
 
 
 
@@ -21,7 +22,7 @@ function MessagePage() {
     }, []);
 
     return (
-        <div>
+        <div className="message-page-container">
             <Header />
             <NavBar />
             <div style={{ display: 'flex', padding: "20px" }}>

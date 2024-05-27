@@ -1,0 +1,80 @@
+/* AdminPage.css */
+.admin-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(244, 232, 211, 0.8);
+    min-height: 100vh; /* Ensure the page takes full height */
+}
+
+.admin-page button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px; /* Add space below buttons */
+}
+
+.admin-page button:hover {
+    background-color: #0056b3;
+}
+
+.admin-page h1 {
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.admin-page input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+}
+
+.admin-page table {
+    width: 100%;
+    max-width: 1000px;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.admin-page th, .admin-page td {
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    text-align: left;
+}
+
+.admin-page th {
+    background-color: #f8f9fa;
+    color: #333333;
+}
+
+.admin-page td {
+    background-color: #ffffff;
+}
+
+.admin-page select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.admin-page .role-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.admin-page .role-button:hover {
+    background-color: #0056b3;
+}

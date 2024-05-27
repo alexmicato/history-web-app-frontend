@@ -4,6 +4,7 @@ import { useUser } from '../../../contexts/UserContext';
 import './PrivateMessage.css';
 import { webSocketService } from '../../../services/WebSocketService';  // Import the WebSocket service
 import { NotificationContext } from '../../../contexts/NotificationContext';
+import { BiSolidConversation } from "react-icons/bi";
 
 function PrivateMessage({ recipientUsername, refreshChats }) {
     const { user } = useUser();
@@ -85,7 +86,7 @@ function PrivateMessage({ recipientUsername, refreshChats }) {
 
     return (
         <div className="private-message-container">
-            <h1>Chat with {recipientUsername}</h1>
+            <h1> Chat with {recipientUsername}</h1>
             <div className="messages">
                 {messages.map((msg, index) => (
                     <div key={index} className={`message ${msg.sender === user.username ? 'message-sent' : 'message-received'}`}>

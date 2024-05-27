@@ -1,0 +1,68 @@
+.articles-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #333;
+    color: white;
+    position: relative; 
+    margin-bottom: 50px;
+    
+}
+
+.articles-nav-buttons, .forum-user-controls, .articles-search-icon {
+    display: flex;
+    align-items: center;
+}
+
+.articles-navbar button, .articles-search-icon {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.articles-search-icon {
+    display: flex;
+    align-items: center;
+}
+
+.articles-search-popup {
+    display: flex;
+    position: absolute;
+    top: 100%; /* Positioning below the navbar */
+    right: 0;
+    background-color: #fff; /* Contrasting background */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.25); /* Adding some shadow for pop-up effect */
+    border: 1px solid #ccc;
+    padding: 15px;
+    z-index: 1000; /* Ensuring it's above other content */
+}
+
+.articles-search-popup input {
+    padding: 10px;
+    margin-right: 10px; /* Space between input and search button */
+    width: 250px; /* Adjust width as needed */
+    border: 1px solid #ccc; /* Subtle border for the input */
+}
+
+.articles-search-popup button {
+    background-color: #007BFF; /* Bootstrap primary blue for visibility */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.articles-search-popup button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.articles-navbar button.selected {
+    background-color: #555; /* Different background for the selected button */
+    border-color: #555;
+}

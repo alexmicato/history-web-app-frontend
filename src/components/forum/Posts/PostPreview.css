@@ -1,5 +1,5 @@
 /* PostPreview.css */
-.article-container {
+.forum-article-container {
     background-color: #f0f0f0; /* Light grey background for each post */
     border: 1px solid #dee2e6; /* Subtle border */
     padding: 20px;
@@ -14,13 +14,13 @@
     border-bottom: 2px solid #333; /* Corrected to include 'solid' and use a dark color for contrast */
 }
 
-.article-container .post-content {
+.forum-article-container .post-content {
     color: #495057; /* Dark grey for text */
     font-size: 16px; /* Slightly larger font for readability */
     margin-bottom: 15px;
 }
 
-.article-container button {
+.forum-article-container button {
     background-color: #007bff; /* Bootstrap primary blue */
     color: white;
     border: none;
@@ -30,11 +30,11 @@
     transition: background-color 0.3s ease;
 }
 
-.article-container button:hover {
+.forum-article-container button:hover {
     background-color: #0056b3; /* Darker blue on hover */
 }
 
-.article-container footer {
+.forum-article-container footer {
     font-size: 14px; /* Smaller font size for meta information */
     color: #6c757d; /* Grey color for less emphasis */
     display: flex;
@@ -42,6 +42,6 @@
     margin-top: 15px;
 }
 
-.article-container footer small {
+.forum-article-container footer small {
     display: block; /* Ensure small tags are on new lines */
 }

@@ -6,6 +6,8 @@ import ArticlesNavBar from '../../components/Article/ArticlesNavBar';
 import ArticleList from '../../components/Article/ArticleList';
 import { useNavigate } from 'react-router-dom';
 import { useUser } from '../../contexts/UserContext';
+import "./ArticlesPage.css"
+import { MdPostAdd } from "react-icons/md";
 
 function ArticlesPage() {
     const { user } = useUser();
@@ -81,7 +83,8 @@ function ArticlesPage() {
     return (
         <div className="articles-page">
             <ArticlesNavBar onSearch={handleSearch} onFilter={handleFilter} />
-            {isModerator && <button onClick={() => handleNavigation('/create-article')}>Create article</button>}
+            {isModerator && <button onClick={() => handleNavigation('/create-article')} className='create-article-button'>
+                <MdPostAdd /> Create article</button>}
             <ArticleList articles={articles} />
             <div className="pagination-controls">
                 <button onClick={previousPage} disabled={page === 0}>Previous</button>

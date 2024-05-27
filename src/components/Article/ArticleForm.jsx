@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import "./ArticleForm.css"
 
 function ArticleForm({ 
     initialTitle, 
@@ -100,7 +101,9 @@ function ArticleForm({
     }, [type]);
 
     useEffect(() => {
-        setType(initialType || '');
+        if (initialType) {
+            setType(initialType);
+        }
     }, [initialType]);
     
 
@@ -114,7 +117,7 @@ function ArticleForm({
                 onChange={(e) => setTitle(e.target.value)}
                 required
             />
-            <label htmlFor="content">Content</label>
+            <label htmlFor="article-content">Content</label>
             <CKEditor
                 editor={ClassicEditor}
                 data={content}
@@ -133,14 +136,14 @@ function ArticleForm({
                     }
                 }}
             />
-            <label htmlFor="summary">Summary</label>
+            <label htmlFor="article-summary">Summary</label>
             <textarea
                 id="summary"
                 value={summary}
                 onChange={(e) => setSummary(e.target.value)}
                 required
             />
-            <label htmlFor="type">Type</label>
+            <label htmlFor="article-type">Type</label>
             <select
                 id="type"
                 value={type}
@@ -197,11 +200,11 @@ function ArticleForm({
                         value={ref.url}
                         onChange={(e) => handleReferenceChange(index, 'url', e.target.value)}
                     />
-                    <button type="button" onClick={() => handleRemoveReference(index)}>Remove</button>
+                    <button type="button" className="remove-reference-button" onClick={() => handleRemoveReference(index)}>Remove</button>
                 </div>
             ))}
-            <button type="button" onClick={handleAddReference}>Add Reference</button>
-            <button type="submit">Submit</button>
+            <button type="button" className="add-reference-button" onClick={handleAddReference}>Add Reference</button>
+            <button type="submit" className="submit-button">Submit</button>
         </form>
     );
 }

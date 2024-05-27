@@ -13,7 +13,7 @@ function PostPreview({ post }) {
     };
 
     return (
-        <article className="article-container" key={post.id}>
+        <article className="forum-article-container" key={post.id}>
             <h2 className='post-title'>{post.title}</h2>
             <div
                 className="post-content"

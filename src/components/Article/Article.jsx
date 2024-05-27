@@ -4,37 +4,25 @@ import { useNavigate } from "react-router-dom";
 import { useUser } from "../../contexts/UserContext";
 import "./Article.css";
 import ArticleForm from "./ArticleForm"; 
-import SimpleModal from "../Modal/SimpleModal"; // Import SimpleModal
+import SimpleModal from "../Modal/SimpleModal"; 
+import { FiMoreVertical } from "react-icons/fi";
+import { MdEdit } from "react-icons/md";
+import { MdDelete } from "react-icons/md";
+import ArticleSummary from "./ArticleSummary";
 
-function Article({ articleId }) {
+function Article({ article, onUpdateArticle }) {
     const navigate = useNavigate();
-    const [article, setArticle] = useState(null);
     const { user } = useUser();
     const isModerator = user && user.roles && user.roles.includes("MODERATOR");
     const [isEditModalOpen, setIsEditModalOpen] = useState(false);
-
-    useEffect(() => {
-        const fetchArticle = async () => {
-            try {
-                const response = await axios.get(`http://localhost:8080/articles/${articleId}`, {
-                    headers: {
-                        Authorization: `Bearer ${localStorage.getItem('authToken')}`,
-                    },
-                });
-                setArticle(response.data);
-            } catch (error) {
-                console.error('Failed to fetch article:', error);
-            }
-        };
-
-        fetchArticle();
-    }, [articleId]);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [chapters, setChapters] = useState([]);
 
     const handleDelete = async () => {
         const confirmed = window.confirm("Are you sure you want to delete this article?");
         if (confirmed) {
             try {
-                await axios.delete(`http://localhost:8080/articles/${articleId}`, {
+                await axios.delete(`http://localhost:8080/articles/${article.id}`, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('authToken')}`,
                     },
@@ -49,7 +37,7 @@ function Article({ articleId }) {
     };
 
     const handleEditSubmit = (updatedArticle) => {
-        setArticle(updatedArticle);
+        onUpdateArticle(updatedArticle);
         setIsEditModalOpen(false);
     };
 
@@ -59,7 +47,22 @@ function Article({ articleId }) {
 
     return (
         <div className="article-page">
-            <h1>{article.title}</h1>
+            <div className="article-header">
+                <h1>{article.title}</h1>
+                {isModerator && (
+                    <div className="dropdown">
+                        <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="dropdown-toggle">
+                            <FiMoreVertical />
+                        </button>
+                        {isDropdownOpen && (
+                            <div className="dropdown-menu">
+                                <button onClick={() => setIsEditModalOpen(true)}><MdEdit/> Edit</button>
+                                <button onClick={handleDelete}><MdDelete/> Delete</button>
+                            </div>
+                        )}
+                    </div>
+                )}
+            </div>
             {article.eventDate && <p>{new Date(article.eventDate).toLocaleDateString()}</p>}
             <div className="article-content" dangerouslySetInnerHTML={{ __html: article.content }}></div>
             <div className="article-tags">
@@ -86,12 +89,6 @@ function Article({ articleId }) {
                     ))}
                 </ul>
             </div>
-            {isModerator && (
-                <>
-                    <button onClick={() => setIsEditModalOpen(true)}>Edit Article</button>
-                    <button onClick={handleDelete}>Delete Article</button>
-                </>
-            )}
             <SimpleModal isOpen={isEditModalOpen} onClose={() => setIsEditModalOpen(false)}>
                 <ArticleForm
                     initialTitle={article.title}
@@ -104,10 +101,9 @@ function Article({ articleId }) {
                     initialReferences={article.references}
                     onSubmit={handleEditSubmit}
                     isUpdate={true}
-                    articleId={articleId}
+                    articleId={article.id}
                 />
             </SimpleModal>
-            
         </div>
     );
 }

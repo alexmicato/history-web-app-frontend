@@ -5,6 +5,7 @@ import './ChatList.css';
 import { useUser } from '../../../contexts/UserContext';
 import { webSocketService } from '../../../services/WebSocketService'
 import { NotificationContext } from '../../../contexts/NotificationContext';
+import { BiSolidConversation } from "react-icons/bi";
 
 function ChatList({ refreshKey }) {
     const [chats, setChats] = useState([]);
@@ -58,7 +59,7 @@ function ChatList({ refreshKey }) {
             {chats.map((chat, index) => (
                 <div key={index} className={`chat-item ${newMessageReceived && chat.username === user.username ? 'new-message' : ''}`}>
                     <Link to={`/messages/${chat.username}`} className="chat-link">
-                        <div className="chat-name">{chat.username}</div>
+                        <div className="chat-name"><BiSolidConversation /> {chat.username}</div>
                         <div className="chat-timestamp">{new Date(chat.lastMessageAt).toLocaleString()}</div>
                     </Link>
                 </div>

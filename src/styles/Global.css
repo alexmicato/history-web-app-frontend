@@ -10,18 +10,22 @@
   --neutral-light: #FBF1E9; /* Linen */
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html, body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
-  }
+  height: 100%;
+}
   
-  body {
-    font-family: 'EB Garamond', 'Times New Roman', serif;
-    line-height: 1.6;
-    font-size: 16px; /* A base font size for the document */
-    background-color: #f5f5f5; /* A default background color */
-    color: #333; /* Default text color */
-  }
+body {
+  font-family: 'EB Garamond', 'Times New Roman', serif;
+  line-height: 1.6;
+  font-size: 16px; /* A base font size for the document */
+  background-color: #f5f5f5; /* A default background color */
+  color: #333; /* Default text color */
+}
 
 
