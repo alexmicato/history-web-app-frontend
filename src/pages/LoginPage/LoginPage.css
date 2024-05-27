@@ -5,22 +5,22 @@
     margin-top: 20px;
     border-radius: 5px;
     border: none;
-    color: var(--neutral-dark); /* Onyx for text, ensuring readability */
-    background-color: #c89868d7; /* Old Burgundy for the button background */
+    color: white; /* Onyx for text, ensuring readability */
+    background-color: #007bff; /* Old Burgundy for the button background */
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-family: 'EB Garamond', 'Times New Roman', serif;
 }
 
 .submit-button:hover {
-    background-color: #a57b51; /* A darker shade of Old Burgundy for hover state */
+    background-color: #005ec2;; /* A darker shade of Old Burgundy for hover state */
 }
 
 .login-container {
     max-width: 300px;
     min-height: 300px;
     width: 300px;
-    background-color: rgba(244, 232, 211, 0.9);; /* Raw Umber */
+    background-color: rgba(244, 232, 211, 0.9); /* Raw Umber */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -81,26 +81,10 @@
 
 .error-message {
     color: #D32F2F; /* This color remains for error visibility */
-    margin-bottom: 0;
     min-height: 20px;
+    font-size: 14px;
 }
 
-.register-button {
-    width: 100%;
-    padding: 12px; /* Increased padding for a larger button */
-    margin-top: 20px; /* Increased margin-top for spacing */
-    border-radius: 5px;
-    border: none;
-    color: #353839; /* Light color for the text */
-    background-color: #c89868d7; /* A color picked from the map for the buttons */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-family: 'Lato', sans-serif; /* A clean font for button text */
-}
-
-.register-button:hover {
-    background-color: #a57b51;  /* A darker shade for hover state */
-}
 
 
 

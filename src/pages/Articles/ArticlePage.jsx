@@ -8,6 +8,7 @@ import { useParams } from 'react-router-dom';
 import Article from '../../components/Article/Article';
 import "./ArticlePage.css"
 import ArticleSummary from '../../components/Article/ArticleSummary';
+import { IoMdArrowRoundBack } from "react-icons/io";
 
 function ArticlePage() {
     const { articleId } = useParams();
@@ -66,7 +67,7 @@ function ArticlePage() {
                     className='article-page-back-button' 
                     onClick={() => navigate('/articles')}
                 >
-                    Back to Articles
+                    <IoMdArrowRoundBack /> Back to Articles
                 </button>
                 <ArticleSummary chapters={chapters} />
             </div>

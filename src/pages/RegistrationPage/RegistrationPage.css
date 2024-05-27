@@ -23,3 +23,20 @@
     margin-bottom: 20px; /* Adds space below the heading */
 
 }
+
+.password-requirements {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(244, 232, 211, 0.9); 
+    border: 1px solid #422f0b;
+    border-radius: 4px;
+}
+
+.password-requirements h3 {
+    margin-top: 0;
+}
+
+.password-requirements ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}

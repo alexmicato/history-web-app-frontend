@@ -21,15 +21,39 @@ function RegistrationPage() {
       setEmailError("Please enter a valid email address.");
       return false;
     }
-    setEmailError(""); // Clear any existing error message
+    setEmailError("");
+    return true;
+  };
+
+  const validateUsername = (username) => {
+    const pattern = /^[a-zA-Z0-9]{3,}$/;
+    if (!pattern.test(username)) {
+      setUsernameError("Username must be at least 3 characters long and contain only letters and numbers.");
+      return false;
+    }
+    setUsernameError("");
     return true;
   };
 
   const validatePassword = (password) => {
-    const pattern =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-    if (!pattern.test(password)) {
-      setPasswordError("Password does not meet the security requirements.");
+    const errors = [];
+    if (password.length < 8) {
+      errors.push("at least 8 characters long");
+    }
+    if (!/[A-Z]/.test(password)) {
+      errors.push("at least one uppercase letter (A-Z)");
+    }
+    if (!/[a-z]/.test(password)) {
+      errors.push("at least one lowercase letter (a-z)");
+    }
+    if (!/\d/.test(password)) {
+      errors.push("at least one digit (0-9)");
+    }
+    if (!/[@$!%*?&]/.test(password)) {
+      errors.push("at least one special character (@$!%*?&)");
+    }
+    if (errors.length > 0) {
+      setPasswordError(`Password must be ${errors.join(', ')}.`);
       return false;
     }
     setPasswordError(""); // Clear any existing error message
@@ -41,11 +65,23 @@ function RegistrationPage() {
 
     let hasErrors = false;
 
-    setUsernameError(username.trim() ? "" : "Username cannot be empty.");
-    setEmailError(!email.trim() ? "Email cannot be empty." : (!validateEmail(email) ? "Please enter a valid email address." : ""));
-    setPasswordError(!password ? "Password cannot be empty." : (!validatePassword(password) ? "Password does not meet the security requirements." : ""));
+    if (!username.trim()) {
+      setUsernameError("Username cannot be empty.");
+      hasErrors = true;
+    } else {
+      setUsernameError("");
+    }
 
-    hasErrors = !username.trim() || !email.trim() || !validateEmail(email) || !password || !validatePassword(password);
+    if (!email.trim() || !validateEmail(email)) {
+      hasErrors = true;
+    }
+
+    if (!password) {
+      setPasswordError("Password cannot be empty.");
+      hasErrors = true;
+    } else if (!validatePassword(password)) {
+      hasErrors = true;
+    }
 
     if (hasErrors) {
       return;
@@ -82,7 +118,10 @@ function RegistrationPage() {
             placeholder="Username"
             className="input-field"
             value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            onChange={(e) => {
+              setUsername(e.target.value);
+              validateUsername(e.target.value);
+            }}
           />
           {usernameError && <div className="error-message">{usernameError}</div>}
           <input
@@ -90,7 +129,10 @@ function RegistrationPage() {
             placeholder="Email"
             className="input-field"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => {
+              setEmail(e.target.value);
+              validateEmail(e.target.value);
+            }}
           />
           {emailError && <div className="error-message">{emailError}</div>}
           <input
@@ -98,13 +140,29 @@ function RegistrationPage() {
             placeholder="Password"
             className="input-field"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) => {
+              setPassword(e.target.value);
+              validatePassword(e.target.value);
+            }}
           />
           {passwordError && <div className="error-message">{passwordError}</div>}
           <button type="submit" className="submit-button">
             Register
           </button>
         </form>
+        <button className="submit-button" onClick={() => navigate("/login")}>
+            Already have an account? Login!
+          </button>
+        <div className="password-requirements">
+          <h3>Password Requirements:</h3>
+          <ul>
+            <li>At least 8 characters long</li>
+            <li>Contains at least one uppercase letter (A-Z)</li>
+            <li>Contains at least one lowercase letter (a-z)</li>
+            <li>Contains at least one digit (0-9)</li>
+            <li>Contains at least one special character (@$!%*?&)</li>
+          </ul>
+        </div>
       </div>
     </div>
   );

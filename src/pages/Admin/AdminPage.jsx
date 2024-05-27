@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import "./AdminPage.css"
+import { FaHome } from "react-icons/fa";
 
 function AdminPage() {
 
@@ -112,7 +113,7 @@ function AdminPage() {
 
     return (
         <div className='admin-page'>
-            <button onClick={() => handleNavigation('/main')}>Home</button>
+            <button onClick={() => handleNavigation('/main')}><FaHome /> Home</button>
             <h1>Manage User Roles</h1>
             <div>
                 <input

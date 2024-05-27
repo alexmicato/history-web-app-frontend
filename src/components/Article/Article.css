@@ -12,7 +12,8 @@
 }
 
 .article-content{
-    border-right: 2px solid #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 50px;
 }
 
 .article-header {
@@ -88,7 +89,7 @@
 }
 
 .article-tags, .article-references {
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 .article-tags h4, .article-references h4 {

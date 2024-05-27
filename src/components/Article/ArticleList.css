@@ -11,6 +11,7 @@
     margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    align-items: center;
 }
 
 .article-list-content {
@@ -22,6 +23,7 @@
     color: #444444;
     line-height: 1.6;
     margin-bottom: 20px;
+    padding-right: 20px;
 }
 
 .article-list-content h2 {
