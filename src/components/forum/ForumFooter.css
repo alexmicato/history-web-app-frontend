@@ -1,10 +1,20 @@
-/* Footer.css */
 .forum-footer {
-    background-color: #222;
-    color: white;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
     text-align: center;
-    padding: 20px 0;
-    position: relative; /* or 'fixed' to stick at the bottom */
+    font-size: 16px;
     bottom: 0;
     width: 100%;
+}
+
+.forum-footer a {
+    color: #007bff; /* A green color to make links stand out */
+    text-decoration: none; /* No underline */
+    margin: 0 10px;
+}
+
+.forum-footer a:hover {
+    text-decoration: underline; /* Underline on hover for better accessibility */
+    color: #0265cf; /* Lighter green on hover */
 }

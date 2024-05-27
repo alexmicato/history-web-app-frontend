@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useUser } from "../../../contexts/UserContext";
+import useOutsideClick from '../../../hooks/useOutsideClick';
 import './UserProfile.css';
 import PostPreview from '../Posts/PostPreview';
 import { FiMoreVertical } from "react-icons/fi";
@@ -22,7 +23,12 @@ function UserProfile({ username }) {
     const [page, setPage] = useState(0);
     const [totalPages, setTotalPages] = useState(0);
     const [categories, setCategories] = useState([]);
+    const optionsRef = useRef(null);
     const pageSize = 10; 
+
+    useOutsideClick(optionsRef, () => {
+        if (showOptions) setShowOptions(false);
+      });
 
     useEffect(() => {
         const loadInitialData = async () => {
@@ -86,7 +92,7 @@ function UserProfile({ username }) {
                     <img src={userData.profileImageUrl} alt={`${userData.username}'s profile`} style={{ width: 100, height: 100 }} />
                 </div>
                 <div className="user-profile-options">
-                    <button onClick={() => setShowOptions(!showOptions)} className="options-button">
+                    <button onClick={() => setShowOptions(!showOptions)} className="options-button" ref={optionsRef} >
                         <FiMoreVertical />
                     </button>
                     {showOptions && (

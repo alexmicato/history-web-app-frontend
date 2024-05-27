@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef  } from "react";
 import './Post.css';
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import useOutsideClick from "../../../hooks/useOutsideClick";
 
 import { useParams } from "react-router-dom";
 import UserLink from "../User/UserLink";
@@ -28,9 +29,15 @@ function Post({ postId }) {
   const [ownedCommentIds, setOwnedCommentIds] = useState([]);
   const [editingCommentId, setEditingCommentId] = useState(null);
   const [editingText, setEditingText] = useState("");
+  const optionsRef = useRef(null);
 
   const { user, logoutUser } = useUser();
   const isModerator = user && user.roles && user.roles.includes("MODERATOR");
+
+  useOutsideClick(optionsRef, () => {
+    if (showOptions) setShowOptions(false);
+    if(showCommentOptions) setShowCommentOptions(false);
+  });
 
   useEffect(() => {
     async function fetchData() {
@@ -308,7 +315,7 @@ function Post({ postId }) {
           <div className="post-header">
             <h1>{post.title}</h1>
             {(isPostOwner || isModerator) && (
-                <div className="post-options">
+                <div className="post-options" ref={optionsRef}>
                   <button onClick={() => setShowOptions(!showOptions)} className="options-button">
                     <FiMoreVertical />
                   </button>
@@ -374,7 +381,7 @@ function Post({ postId }) {
                         <p>{comment.content}</p>
                         {(ownedCommentIds.includes(comment.id) ||
                           isModerator) && (
-                          <div className="comment-options">
+                          <div className="comment-options" ref={optionsRef}>
                             <button
                               onClick={() =>
                                 setShowCommentOptions(

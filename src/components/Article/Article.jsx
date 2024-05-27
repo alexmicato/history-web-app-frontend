@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../../contexts/UserContext";
@@ -9,6 +9,7 @@ import { FiMoreVertical } from "react-icons/fi";
 import { MdEdit } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
 import ArticleSummary from "./ArticleSummary";
+import useOutsideClick from "../../hooks/useOutsideClick";
 
 function Article({ article, onUpdateArticle }) {
     const navigate = useNavigate();
@@ -16,7 +17,12 @@ function Article({ article, onUpdateArticle }) {
     const isModerator = user && user.roles && user.roles.includes("MODERATOR");
     const [isEditModalOpen, setIsEditModalOpen] = useState(false);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-    const [chapters, setChapters] = useState([]);
+    const optionsRef = useRef(null);
+
+    useOutsideClick(optionsRef, () => {
+        if (isDropdownOpen) setIsDropdownOpen(false);
+      });
+    
 
     const handleDelete = async () => {
         const confirmed = window.confirm("Are you sure you want to delete this article?");
@@ -51,7 +57,7 @@ function Article({ article, onUpdateArticle }) {
                 <h1>{article.title}</h1>
                 {isModerator && (
                     <div className="dropdown">
-                        <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="dropdown-toggle">
+                        <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="dropdown-toggle" ref={optionsRef}>
                             <FiMoreVertical />
                         </button>
                         {isDropdownOpen && (

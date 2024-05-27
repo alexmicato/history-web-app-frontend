@@ -37,7 +37,7 @@ function ArticlesNavBar({ onSearch, onFilter }) {
         <nav className="articles-navbar">
             <button onClick={() => handleNavigation('/main')} title="Home" ><FaHome /></button>
             <div className='articles-navbar-buttons'>
-                <button onClick={handleReload} className={selectedType === '' ? 'selected' : ''}>All</button>
+                <button onClick={(handleReload)} className={selectedType === '' ? 'selected' : ''}>All</button>
                 <button 
                     onClick={() => handleFilter('Event')} 
                     className={selectedType === 'Event' ? 'selected' : ''}
