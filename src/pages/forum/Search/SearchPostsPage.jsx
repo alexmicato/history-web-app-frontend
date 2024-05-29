@@ -9,10 +9,12 @@ import UserLink from "../../../components/forum/User/UserLink";
 import { fetchCategories } from "../../../services/CategoryService";
 import SearchPostsResults from "../../../components/forum/Search/SearchPostsResults";
 import ForumSidebar from "../../../components/forum/ForumSidebar";
+import useSwipeToggle from "../../../hooks/useSwipeToggle";
 
 function SearchPostsPage() {
   const navigate = useNavigate();
   const [categories, setCategories] = useState([]);
+  const [isSidebarVisible, setSidebarVisibility] = useSwipeToggle(false);
 
   useEffect(() => {
     const loadInitialData = async () => {
@@ -37,7 +39,9 @@ function SearchPostsPage() {
       <Banner />
       <NavBar />
       <div className="forum-content">
-        <ForumSidebar />
+        <div className={`forum-page-filter ${isSidebarVisible ? 'visible' : ''}`}>
+            <ForumSidebar />
+        </div>
         <main className="forum-main">
           <SearchPostsResults />
         </main>

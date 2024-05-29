@@ -1,7 +1,7 @@
 .article-page-container {
     background-color: rgba(244, 232, 211, 0.8);
     min-height: 750px;
-    height: 100%; /* Full height of the parent */
+    height: 100vh; /* Full height of the parent */
     width: 100%; /* Full width */
     display: flex;
     justify-content: flex-start; /* Align items at the top */
@@ -37,4 +37,63 @@
 
 .article-page-back-button:hover {
     background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    /* Adjusting the main container */
+    .article-page-container {
+        flex-direction: column; /* Stack components vertically on smaller screens */
+        align-items: center; /* Center-align items for better presentation */
+    }
+
+    /* Full-width article page to utilize space and removing left margin */
+    .article-page {
+        width: 100%; /* Take up full width */
+        max-width: 100%; /* Override any max-width */
+        margin-left: 0; /* Remove margin to align with the edge */
+        padding: 10px; /* Smaller padding to utilize space */
+    }
+
+    /* Initially hide sidebar and make it slide in */
+    .article-page-sidebar {
+        position: absolute; /* Positioning it absolutely to slide in */
+        width: 80%; /* Slightly smaller width for slide in effect */
+        left: -100%; /* Start off-screen to the left */
+        transition: left 0.3s; /* Smooth transition for sliding in */
+        z-index: 100; /* Ensure it is above other content */
+        height: auto; /* Adjust height based on content */
+        overflow-y: auto; /* Allow scrolling within the sidebar */
+    }
+
+    /* Sidebar visibility toggle: assuming you manage this with JS */
+    .article-page-sidebar.active {
+        left: 0; /* Slide in to view */
+    }
+
+    /* Adjusting the back button within sidebar for easy access */
+    .article-page-back-button {
+        width: 100%; /* Full-width for easier touch access */
+        margin-bottom: 10px; /* Ensure spacing below is consistent */
+    }
+
+    /* Article summary adjustment */
+    .article-summary {
+        position: static; /* Static positioning in normal flow */
+        width: 100%; /* Full width to fit mobile screens */
+        max-height: none; /* Remove max-height limitation */
+        overflow-y: visible; /* Remove overflow handling */
+        margin-right: 0; /* Remove extra margin */
+        padding: 10px; /* Adjust padding for smaller screens */
+        box-shadow: none; /* Optional: remove shadow for cleaner look */
+    }
+
+    /* Font size adjustments for better readability on small screens */
+    .article-content, .article-tags li, .article-references li {
+        font-size: 1em; /* Standard font size for mobile readability */
+    }
+
+    /* Heading adjustments for mobile screens */
+    .article-header h1, .article-tags h4, .article-references h4 {
+        font-size: 1.5em; /* Smaller headings for less screen space usage */
+    }
 }

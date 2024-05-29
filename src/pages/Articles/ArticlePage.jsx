@@ -9,12 +9,14 @@ import Article from '../../components/Article/Article';
 import "./ArticlePage.css"
 import ArticleSummary from '../../components/Article/ArticleSummary';
 import { IoMdArrowRoundBack } from "react-icons/io";
+import useSwipeToggle from '../../hooks/useSwipeToggle';
 
 function ArticlePage() {
     const { articleId } = useParams();
     const [article, setArticle] = useState(null);
     const [chapters, setChapters] = useState([]);
     const navigate = useNavigate();
+    const [isSidebarVisible, setSidebarVisibility] = useSwipeToggle(false);
 
     const extractChapters = (content) => {
         const parser = new DOMParser();
@@ -62,7 +64,7 @@ function ArticlePage() {
 
     return (
         <div className='article-page-container'>
-            <div className='article-page-sidebar'>
+            <div className={`article-page-sidebar ${isSidebarVisible ? 'active' : ''}`}>
                 <button 
                     className='article-page-back-button' 
                     onClick={() => navigate('/articles')}

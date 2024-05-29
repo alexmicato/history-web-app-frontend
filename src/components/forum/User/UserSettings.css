@@ -87,3 +87,27 @@
 .predefined-pic.selected {
     border-color: blue;
 }
+
+@media (max-width: 768px) {
+    .settings-container {
+        flex-direction: column; /* Stack flex items vertically */
+        padding: 10px; /* Reduce padding for smaller screens */
+        margin: 10px; /* Reduce margin to fit smaller screens */
+        gap: 10px; /* Reduce gap to conserve space */
+    }
+
+    .settings-section {
+        width: 100%; /* Full width for each section */
+        padding: 10px; /* Reduce padding inside the sections */
+    }
+
+    .settings-input, 
+    .settings-submit-button {
+        max-width: none; /* Remove max-width restriction */
+    }
+
+    .settings-label,
+    .settings-form-group {
+        width: 100%; /* Ensure full width usage for better alignment */
+    }
+}

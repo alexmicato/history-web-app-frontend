@@ -45,3 +45,25 @@
 .forum-article-container footer small {
     display: block; /* Ensure small tags are on new lines */
 }
+
+@media (max-width: 768px) {
+    .forum-article-container {
+        width: auto; /* Adjust width to use available space */
+        padding: 15px; /* Adjust padding for a more compact layout */
+        margin: 10px 5px; /* Reduce margin to better fit mobile screens */
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Lighter shadow for less emphasis */
+    }
+
+    .forum-article-container .post-content, 
+    .forum-article-container footer {
+        font-size: 14px; /* Increase font size for better readability */
+    }
+
+    .post-title {
+        font-size: 18px; /* Increase title font size for prominence */
+    }
+
+    .forum-articleach-container button {
+        padding: 12px 12px; /* Larger touch area for easier interaction */
+    }
+}

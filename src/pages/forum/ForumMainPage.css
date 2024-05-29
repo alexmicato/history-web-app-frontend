@@ -95,3 +95,31 @@
     right: 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional for better visibility */
 }
+
+@media (max-width: 768px) {
+
+    .forum-container{
+        flex-direction: column;
+    }
+    .forum-page-filter {
+        position: fixed;
+        width: 80%;
+        left: -100%;
+        top: 0;
+        bottom: 0;
+        z-index: 100;
+        transition: left 0.3s;
+    }
+
+    .forum-page-filter.visible {
+        left: 0; /* Should slide in to view */
+    }
+
+    .forum-content {
+        flex-direction: column; /* Adjust if necessary */
+    }
+
+    .forum-main {
+        width: 100%; /* Full width when sidebar is not visible */
+    }
+}

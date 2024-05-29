@@ -23,3 +23,17 @@
 .create-article-button:hover {
     background-color: #0056b3; /* Darker blue on hover */
 }
+
+@media (max-width: 768px) {
+    .articles-page {
+        background-color: rgba(244, 232, 211, 1); /* Adjust background opacity if needed */
+        padding: 10px; /* Add padding for better spacing */
+    }
+
+    .create-article-button {
+        width: 80%; /* Increase width for better mobile accessibility */
+        padding: 15px 0; /* Increase padding for a taller, more clickable button */
+        margin: 10px auto; /* Center button horizontally */
+        display: block; /* Ensure it blocks to the width of its container */
+    }
+}

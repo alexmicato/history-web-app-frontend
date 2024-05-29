@@ -69,3 +69,46 @@
 .profile-image img {
     margin-left: 30px;
 }
+
+@media (max-width: 768px) {
+    .profile-info {
+        padding: 15px; /* Slightly reduce padding for more space */
+        margin-top: 10px; /* Reduce margin-top for closer spacing */
+    }
+
+    .profile-info img {
+        width: 100px; /* Reduce the size of the profile image */
+        height: 100px; /* Keep the image circular and proportional */
+    }
+
+    .profile-info h2 {
+        font-size: 16px; /* Increase readability with a slightly larger font size */
+    }
+
+    .user-profile-options-menu {
+        width: 150px; /* Adjust to full width to ensure all text fits */
+        top: 100%; /* Align below the options button */
+        right: 0; /* Align to the right of the container */
+    }
+
+    .user-profile-options-menu button {
+        white-space: nowrap; /* Prevent text wrapping */
+        text-overflow: ellipsis; /* Use ellipsis for text that overflows */
+        padding: 12px 20px; /* Increase padding for better touch interaction */
+    }
+
+    .profile-header {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center-align the items */
+    }
+
+    .profile-image {
+        padding: 20px; /* Reduce padding */
+        justify-content: center; /* Ensure image is centered */
+    }
+
+    .profile-image img {
+        margin: 0; /* Remove left margin for centered alignment */
+    }
+
+}

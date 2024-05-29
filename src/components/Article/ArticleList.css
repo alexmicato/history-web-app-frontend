@@ -71,3 +71,47 @@
 .article-container button:hover {
     background-color: #0056b3;
 }
+
+@media (max-width: 768px) {
+    .article-list {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .article-container {
+        flex-direction: column; /* Stack elements vertically */
+        padding: 10px; /* Reduce padding to save space */
+        align-items: stretch; /* Align items stretch to fill the container width */
+    }
+
+    .article-list-content {
+        margin-right: 0; /* Remove right margin as it's now vertical */
+        padding-left: 10px; /* Reduce padding for smaller screens */
+        padding-right: 10px; /* Reduce padding for smaller screens */
+        border-right: none; /* Remove border right on smaller screens */
+        order: 2; /* Order to display content after the image */
+    }
+
+    .article-image {
+        order: 1; /* Display image first */
+        padding: 0; /* Remove padding around the image */
+        margin-bottom: 10px; /* Space between image and text content */
+    }
+
+    .article-image img {
+        width: 100%; /* Full width images */
+    }
+
+    .article-container button, .article-list-content button {
+        width: 100%; /* Full-width button for easier touch access */
+        padding: 12px; /* Larger padding for better touch interaction */
+    }
+
+    .post-title {
+        font-size: 1.5em; /* Larger title font for better readability */
+    }
+
+    .article-container .post-content, .article-list-content h2, .article-list-content p {
+        font-size: 1em; /* Adjust font size for readability on small screens */
+    }
+}

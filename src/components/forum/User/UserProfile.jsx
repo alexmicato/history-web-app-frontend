@@ -92,7 +92,7 @@ function UserProfile({ username }) {
                     <img src={userData.profileImageUrl} alt={`${userData.username}'s profile`} style={{ width: 100, height: 100 }} />
                 </div>
                 <div className="user-profile-options">
-                    <button onClick={() => setShowOptions(!showOptions)} className="options-button" ref={optionsRef} >
+                    <button onClick={() => setShowOptions(!showOptions)} className="options-button" /*ref={optionsRef}*/ >
                         <FiMoreVertical />
                     </button>
                     {showOptions && (

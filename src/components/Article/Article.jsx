@@ -57,7 +57,7 @@ function Article({ article, onUpdateArticle }) {
                 <h1>{article.title}</h1>
                 {isModerator && (
                     <div className="dropdown">
-                        <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="dropdown-toggle" ref={optionsRef}>
+                        <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="dropdown-toggle">
                             <FiMoreVertical />
                         </button>
                         {isDropdownOpen && (

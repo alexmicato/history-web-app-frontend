@@ -66,3 +66,42 @@
     background-color: #555; /* Different background for the selected button */
     border-color: #555;
 }
+
+@media (max-width: 768px) {
+    .articles-navbar {
+        padding: 0 10px; /* Reduce padding */
+        flex-direction: column; /* Stack elements vertically */
+        align-items: stretch; /* Stretch elements to fit the full width */
+    }
+
+    .articles-navbar button, .articles-search-icon {
+        padding: 8px 10px; /* Reduce padding for smaller screens */
+        font-size: 14px; /* Reduce font size */
+        margin-right: 5px; /* Reduce margin */
+    }
+
+    .articles-nav-buttons, .forum-user-controls, .articles-search-icon {
+        justify-content: center; /* Center the elements when stacked */
+        margin-top: 10px; /* Add top margin to separate from the main nav */
+        flex-wrap: wrap; /* Allow elements to wrap in smaller spaces */
+    }
+
+    .articles-search-popup {
+        flex-direction: column; /* Stack input and button vertically */
+        align-items: center; /* Center alignment of children */
+        padding: 10px; /* Reduce padding */
+        width: 90%; /* Make popup wider to utilize space */
+        left: 5%; /* Center popup */
+        right: 5%; /* Ensure consistent spacing from sides */
+    }
+
+    .articles-search-popup input {
+        width: 100%; /* Full width input */
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 10px; /* Add bottom margin for spacing */
+    }
+
+    .articles-search-popup button {
+        width: 100%; /* Full width button */
+    }
+}

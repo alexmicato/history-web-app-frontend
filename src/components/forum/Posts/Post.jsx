@@ -315,7 +315,7 @@ function Post({ postId }) {
           <div className="post-header">
             <h1>{post.title}</h1>
             {(isPostOwner || isModerator) && (
-                <div className="post-options" ref={optionsRef}>
+                <div className="post-options" /*ref={optionsRef}*/>
                   <button onClick={() => setShowOptions(!showOptions)} className="options-button">
                     <FiMoreVertical />
                   </button>
@@ -381,7 +381,7 @@ function Post({ postId }) {
                         <p>{comment.content}</p>
                         {(ownedCommentIds.includes(comment.id) ||
                           isModerator) && (
-                          <div className="comment-options" ref={optionsRef}>
+                          <div className="comment-options" /*ref={optionsRef}*/>
                             <button
                               onClick={() =>
                                 setShowCommentOptions(

@@ -10,10 +10,12 @@ import { fetchCategories } from '../../services/CategoryService';
 import ForumSidebar from '../../components/forum/ForumSidebar';
 import PostPreview from '../../components/forum/Posts/PostPreview';
 import { TbArrowsSort } from "react-icons/tb";
+import useSwipeToggle from '../../hooks/useSwipeToggle';
 
 function ForumMainPage()
 {
     const navigate = useNavigate();
+    const [isSidebarVisible, setSidebarVisibility] = useSwipeToggle(false);
     const [posts, setPosts] = useState([]);
     const [page, setPage] = useState(0);
     const [totalPages, setTotalPages] = useState(0);
@@ -67,7 +69,9 @@ function ForumMainPage()
             <Banner />
             <NavBar />
             <div className='forum-content'>
-                <ForumSidebar />
+                <div className={`forum-page-filter ${isSidebarVisible ? 'visible' : ''}`}>
+                    <ForumSidebar />
+                </div>
                 <main className='forum-main'>
                     <button onClick={toggleSortDirection}>
                         Sort <TbArrowsSort />

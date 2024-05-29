@@ -95,3 +95,42 @@
     background: #0056b3;
   }
   
+  @media (max-width: 768px) {
+    .timeline-container {
+        padding: 5px; /* Reduce padding */
+        height: 50px; /* Reduce height */
+    }
+    
+    .timeline-control {
+        padding: 5px; /* Reduce padding */
+        font-size: 0.9em; /* Reduce font size */
+    }
+
+    .timeline {
+        padding: 0 5px; /* Add padding on the sides for better scrolling */
+    }
+
+    .timeline-content {
+        gap: 5px; /* Reduce gap between items */
+    }
+
+    .timeline-item {
+        padding: 5px; /* Reduce padding */
+        font-size: 0.8em; /* Reduce font size */
+    }
+
+    .timeline-controls {
+        gap: 5px; /* Reduce gap between control buttons */
+        margin-left: 10px; /* Reduce margin to save space */
+    }
+
+    .jump-select {
+        padding: 3px; /* Reduce padding */
+        font-size: 0.8em; /* Reduce font size */
+    }
+
+    .jump-button {
+        padding: 5px; /* Reduce padding */
+        font-size: 0.9em; /* Reduce font size */
+    }
+}

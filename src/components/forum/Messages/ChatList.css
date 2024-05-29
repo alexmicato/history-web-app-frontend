@@ -55,19 +55,24 @@
     color: #00695c; /* Darker text for emphasis */
 }
 
-/* Responsive design for smaller devices */
-@media (max-width: 768px) {
+@media (max-weight: 768px) {
     .chat-list {
-        width: 100%; /* Full width on smaller screens */
-        padding: 5px;
-        box-shadow: none; /* Optional: remove shadow on smaller devices */
+        width: 80%; /* Adjusted width */
+        height: 100%; /* Cover the full viewport height */
+        position: fixed; /* Fixed position */
+        top: 0; /* Align top */
+        bottom: 0; /* Align bottom */
+        left: -80%; /* Start off-screen to the left */
+        overflow-y: auto; /* Enable vertical scrolling */
+        transition: left 0.3s ease; /* Smooth transition for sliding in and out */
+        z-index: 1000; /* High z-index to cover other components */
+        background-color: #fff; /* Ensure background is not transparent */
     }
 
-    .chat-link {
-        padding: 10px; /* Smaller padding on smaller screens */
-    }
-
-    .chat-name, .chat-timestamp {
-        font-size: 0.9em; /* Adjust font size for readability on small devices */
+    .chat-list.visible {
+        left: 0; /* Bring into view when visible */
     }
 }
+
+
+

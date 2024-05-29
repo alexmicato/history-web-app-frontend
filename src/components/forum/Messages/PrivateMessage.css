@@ -88,3 +88,22 @@
     padding: 0;
     margin: 0;
 }
+
+@media (max-width: 768px) {
+    .private-message-container {
+        width: 100%; /* Full width */
+        max-width: none; /* Remove any max-width */
+        margin: 0; /* Remove margin to fit the screen */
+        border: none; /* Optional: remove border for cleaner look */
+        box-shadow: none; /* Optional: remove shadow for a flatter design */
+    }
+
+    .messages {
+        height: calc(100vh - 160px); /* Adjust height based on your other UI elements */
+    }
+
+    .send-message-button,
+    .message-input-field {
+        width: 100%; /* Full width for input and button */
+    }
+}

@@ -55,3 +55,42 @@
 .search-popup button:hover {
     background-color: #0056b3; /* Darker blue on hover */
 }
+
+@media (max-width: 768px) {
+    .forum-navbar {
+        flex-direction: column; /* Stack elements vertically */
+        padding: 10px; /* Reduce padding for space efficiency */
+        align-items: flex-start; /* Align items to the start for better structure */
+    }
+
+    .forum-nav-buttons, .forum-user-controls, .forum-search-icon {
+        width: 100%; /* Full width to use available space */
+        justify-content: space-between; /* Space out elements evenly */
+        flex-wrap: wrap; /* Allow elements to wrap onto the next line */
+        margin-top: 10px; /* Extra space between rows when wrapped */
+    }
+
+    .forum-navbar button, .forum-search-icon {
+        padding: 8px 10px; /* Slightly smaller padding */
+        font-size: 14px; /* Slightly smaller font size */
+        margin-right: 5px; /* Reduce margin to fit more elements */
+        flex-grow: 1; /* Allow buttons to grow and fill space */
+    }
+
+    .search-popup {
+        width: 90%; /* Reduce width to avoid edge overflow */
+        flex-direction: column; /* Stack input and button vertically */
+        padding: 10px; /* Adjust padding for smaller size */
+        right: 5%; /* Center it with a slight offset */
+        left: 5%; /* Center it with a slight offset */
+    }
+
+    .search-popup input {
+        width: 100%; /* Full width for input field */
+        margin: 0 0 10px 0; /* Adjust margin for stacking */
+    }
+
+    .search-popup button {
+        width: 100%; /* Full width for button */
+    }
+}
