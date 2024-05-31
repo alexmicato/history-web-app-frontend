@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Phyrrus of Epirus",
+				"date": "Born c. 319 BC",
+				"significance":"King of Epirus. Waged war against Rome. The term 'Phyrric Victory' is named after him, because of his costly victories. ",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/BC300/pyrrhus.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					20.254059774587603,
+          39.899557630594984
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

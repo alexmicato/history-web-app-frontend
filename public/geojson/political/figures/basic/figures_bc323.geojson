@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Alexander the Great",
+				"date": "336–323 BC",
+				"significance":"King of Macedon. Conquered the Persian Empire",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/BC323/alexander_the_great.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					22.986584539358773,
+          40.76891553652703
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

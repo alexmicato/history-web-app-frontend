@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Marcus Aurelius",
+				"date": "Born 26 April 121",
+				"significance":"Roman Emperor, known as the Philosopher Emperor. ",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/200/marcus_aurelius.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					12.468559639998972,
+          41.895507187914745
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

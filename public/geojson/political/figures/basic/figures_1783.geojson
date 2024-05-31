@@ -6,7 +6,8 @@
 			"properties": {
 				"name": "Napoleon Bonaparte is born in Ajaccio",
 				"date": "15 August 1769",
-				"significance":"Future French Emperor"
+				"significance":"Future French Emperor",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/1783/napoleon.jpg"
 			},
 			"geometry": {
 				"coordinates": [

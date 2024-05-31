@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Attila the Hun",
+				"date": "Born c. 406",
+				"significance":"King and chieftain of the Hunnic Empire. ",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/500/attila.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					19.079729495848028,
+          47.4572791310041
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

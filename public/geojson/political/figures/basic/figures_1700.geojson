@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Peter the Great",
+				"date": "Reign 2 November 1721 – 8 February 1725",
+				"significance":"Emperor of All Russia",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/1700/peter_the_great.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					37.67306650752664,
+          55.817402945613225
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

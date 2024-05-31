@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Alexander I of Russia",
+				"date": "23 March 1801 – 1 December 1825",
+				"significance":"Emperor of Russia during the Napoleonic Wars",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/1800/alexander_i.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					30.410174204117226,
+          59.869524413030064
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

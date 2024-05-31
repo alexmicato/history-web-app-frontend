@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Cristopher Columbus",
+				"date": "Born between 25 August and 31 October 1451",
+				"significance":"Italian explorer and navigator. ",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/1492/cristopher_columbus.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					8.983115154708997,
+          44.470490479398734
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

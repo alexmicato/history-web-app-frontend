@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Hannibal",
+				"date": "Born 247 BC",
+				"significance":"Carthaginian general. Almost brough the Roman Republic to its heels. ",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/BC200/hannibal.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					10.146528090279617,
+          36.760461100803454
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

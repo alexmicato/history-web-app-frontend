@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Constantine the Great",
+				"date": "Reign - 25 July 306 – 22 May 337",
+				"significance":"Roman Emperor. Made Christianity legal in the empire. ",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/400/constantine_the_great.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					12.468559639998972,
+          41.895507187914745
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

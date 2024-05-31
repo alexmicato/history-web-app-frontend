@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Sulla",
+				"date": "Born 138 BC",
+				"significance":"Roman dictator. First man of the republic to seize power through force.",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/BC100/sulla.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					12.468559639998972,
+          41.895507187914745
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

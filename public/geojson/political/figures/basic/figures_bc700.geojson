@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Solomon",
+				"date": "Reign - c 970–931 BCE (hypothesised)",
+				"significance":"King of Israel",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/BC700/solomon.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					35.188171391457786,
+					31.763257504287395
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

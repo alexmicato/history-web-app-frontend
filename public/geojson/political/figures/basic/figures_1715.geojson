@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Louis XIV",
+				"date": "14 May 1643 – 1 September 1715",
+				"significance":"Absolute french king. Knows as the 'Sun King' ",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/1715/louis_xiv.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					2.445418047249035,
+          48.89357477199064
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

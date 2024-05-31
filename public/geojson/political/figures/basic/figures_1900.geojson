@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Nicholas II",
+				"date": "1 November 1894 – 15 March 1917",
+				"significance":"Tsar of Russia",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/1900/nicholas_i.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					30.410174204117226,
+          59.869524413030064
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

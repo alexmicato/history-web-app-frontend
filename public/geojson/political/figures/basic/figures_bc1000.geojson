@@ -1,0 +1,69 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Thutmose III",
+				"date": "28 April 1479 – 11 March 1425 BC",
+				"significance":"Pharaoh of Egypt. Preeminent warrior. Expanded Egypt to its greatest extent",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/BC1000/thutmose_III.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					31.216394,
+					29.871267
+				],
+				"type": "Point"
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Akhenaten",
+				"date": "Reign - 1353–1336 BC (dependes on the source)",
+				"significance":"Pharaoh of Egypt. Introduced the religion of Atenism. Was abandoned after his death. ",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/BC1000/akhenaten.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					30.906297854755707,
+					31.256290677027522
+				],
+				"type": "Point"
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Tutankhamun",
+				"date": "Reign - 1332–1323 BC",
+				"significance":"Pharaoh of Egypt. Youngest pharaoh",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/BC1000/tutankhamun.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					32.29697925142165,
+					30.967116187437313
+				],
+				"type": "Point"
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Rammesses II",
+				"date": "Reign - 1279–1213 BC",
+				"significance":"Pharaoh of Egypt. Considered Ancient Egypt's greatest ruler",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/BC1000/ramesses_II.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					30.156269638448123,
+					30.749190256094778
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

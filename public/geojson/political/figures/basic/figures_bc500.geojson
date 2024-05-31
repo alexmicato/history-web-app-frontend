@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Nebuchadnezzar II",
+				"date": "Reign - August 605 BC – 7 October 562 BC",
+				"significance":"King of the Neo-Babylonian Empire. Regarded as the empire's greatest king. ",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/BC500/nebuchadnezzar_II.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					43.0563479050617,
+					36.42630455221753
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

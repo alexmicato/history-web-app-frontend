@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Leonidas I",
+				"date": "Reign - 489–480 BC",
+				"significance":"King of Sparta. Famous for his last stand at Thermopylae",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/BC400/leonidas.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					22.681663954068142,
+          36.970848370931506
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "William the Conqueror",
+				"date": "Born c. 1028",
+				"significance":"Norman Duke. Became King of England after the Battle of Hastings. ",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/1100/william.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					-0.32770042319759796,
+          49.15785584130839
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

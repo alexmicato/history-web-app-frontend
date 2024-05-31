@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Klemens von Metternich",
+				"date": "25 May 1821 – 13 March 1848",
+				"significance":"Chancellor of the Austrian Empire and influential diplomat. ",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/1815/metternich.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					16.36604356548645,
+          48.268831173518805
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

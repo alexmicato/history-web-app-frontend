@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Genghis Khan",
+				"date": "Born Temüjin c. 1162",
+				"significance":"Founder of the Mongol Empire. ",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/1200/genghis.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					105.26088101114067,
+          47.32123776608634
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

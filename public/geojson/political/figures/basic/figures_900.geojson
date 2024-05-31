@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Alfred the Great",
+				"date": "Born 847-849",
+				"significance":"King of the Anglo-Saxons. Considered first King of England",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/900/alfred.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					-0.1482591038557075,
+          51.501430761969004
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

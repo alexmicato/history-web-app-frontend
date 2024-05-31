@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Bismarck",
+				"date": "21 March 1871 – 20 March 1890",
+				"significance":"Chancellor of Prussia and later Germany. Had an important role in unifying Germany.",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/1880/bismarck.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					13.346147613133269,
+          52.47918430286322
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

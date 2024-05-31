@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Justinian the Great",
+				"date": "Reign - 1 April 527 – 14 November 565",
+				"significance":"Eastern Roman Emperor. Attempted to conquer the West. ",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/600/justinian.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					29.026801295470733,
+          41.09741719086807
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

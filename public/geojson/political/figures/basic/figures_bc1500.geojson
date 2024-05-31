@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Hammurabi",
+				"date": "Reign - 1792 – 1750 BC",
+				"significance":"King of Babylon. Famous for the Hammurabi Code",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/BC1500/hammurabi.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					44.421111,
+					32.5425
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

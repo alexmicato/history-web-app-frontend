@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Henry VIII",
+				"date": "Reign 22 April 1509 – 28 January 1547",
+				"significance":"King of England",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/1530/henry_viii.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					-0.09690995453985352,
+          51.500439695937416
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

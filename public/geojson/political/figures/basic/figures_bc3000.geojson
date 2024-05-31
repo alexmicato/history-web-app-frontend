@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Narmer",
+				"date": "Reign - Somewhere in between 3273–2987 BC",
+				"significance":"First? Pharaoh of Egypt",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/BC3000/narmer.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					31.2525656564,
+					29.8431299608 
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

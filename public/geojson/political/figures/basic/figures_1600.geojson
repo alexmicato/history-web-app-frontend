@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Martin Luther",
+				"date": "Died 18 February 1546",
+				"significance":"Started the reformation movement",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/1600/martin_luther.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					10.24977290302607,
+          50.10885750937075
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

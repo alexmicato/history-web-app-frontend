@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Kublai Khan",
+				"date": "Born 23 September 1215",
+				"significance":"Khagan of the Mongol Empire. Emperor of the Yuan Dynasty . ",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/1279/kublai.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					116.55578694137984,
+          38.87843346031485
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Joan of Arc",
+				"date": "Born 1412",
+				"significance":"French woman general. Helped the french win the Hundred Years War. ",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/1400/joan_of_arc.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					2.319763002766365,
+          48.84782971727208
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

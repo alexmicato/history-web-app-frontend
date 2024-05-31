@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Aurelian",
+				"date": "Born 9 September 214",
+				"significance":"Roman Emperor. He was called the Restorer of The World, for saving the Empire from certain destruction. ",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/300/aurelian.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					12.468559639998972,
+          41.895507187914745
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

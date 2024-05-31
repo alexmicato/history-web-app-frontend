@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Philip IV of France",
+				"date": "Born 8 April – June 1268",
+				"significance":"King of France",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/1300/philip_iv_france.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					2.319763002766365,
+          48.84782971727208
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

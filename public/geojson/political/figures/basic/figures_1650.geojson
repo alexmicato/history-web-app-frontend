@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Gustavus Adolphus",
+				"date": "Reign 30 October 1611 – 6 November 1632",
+				"significance":"King of Sweden",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/1650/gustavus_adolphus.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					18.039248879252284,
+          59.30859540175774
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Trajan",
+				"date": "Born 18 September 53",
+				"significance":"Roman Emperor. Under his reign the Roman Empire achieved its greatest extent. ",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/100/trajan.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					12.468559639998972,
+          41.895507187914745
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

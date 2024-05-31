@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Charlemagne",
+				"date": "Born 2 April 748",
+				"significance":"Emperor of the Carolingian Empire. Nicknamed 'Father of Europe'",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/800/charlemagne.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					2.313157465354635,
+          48.76878680560901
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

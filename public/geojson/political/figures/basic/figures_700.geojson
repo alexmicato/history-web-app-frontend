@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Muhammad",
+				"date": "Died 8 June 632 CE",
+				"significance":"Founder of Islam. ",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/700/muhammad.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					39.6336149518543,
+          24.46161785256946
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

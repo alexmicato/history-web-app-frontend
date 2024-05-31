@@ -1,0 +1,35 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Djoser",
+				"date": "Reign - 2686–2648 BC (depending on the source)",
+				"significance":"Pharaoh of Egypt. Built the pyramid of Djoser",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/BC2000/djoser.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					31.216394,
+					29.871267
+				],
+				"type": "Point"
+			}},
+			{"type": "Feature",
+			"properties": {
+				"name": "Khufu",
+				"date": "Reign - c. 2589 – c. 2566 BC",
+				"significance":"Pharaoh of Egypt. Built the Great Pyramid of Giza",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/BC2000/khufu.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					31.134167,
+					29.979167
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

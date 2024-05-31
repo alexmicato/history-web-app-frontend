@@ -1,0 +1,21 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Otto the Great",
+				"date": "Born 23 November 912",
+				"significance":"Holy Roman Emperor.",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/1000/otto.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					10.866340008415108,
+          51.33546508936186
+				],
+				"type": "Point"
+			}
+		}
+	]
+}
