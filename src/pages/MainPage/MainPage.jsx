@@ -25,14 +25,16 @@ function MainPage() {
   useEffect(() => {
     const fetchTodayEvent = async () => {
       try {
-        const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
+        const userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        const today = new Date();
+        const dateStr = today.toLocaleDateString('en-CA', { timeZone: userTimezone }); // 'en-CA' format gives YYYY-MM-DD
         const token = localStorage.getItem('authToken');
-        const response = await axios.get(`http://localhost:8080/articles/event-of-the-day?date=${today}`, {
-          headers: {
-            Authorization: `Bearer ${token}`
-          }
+        const response = await axios.get(`http://localhost:8080/articles/eventOfTheDay`, {
+            params: { date: dateStr },
+            headers: { Authorization: `Bearer ${token}` }
         });
         setTodayEvent(response.data || null);
+        console.log('Today\'s event:', todayEvent);
         setLoadingEvent(false);
       } catch (error) {
         console.error('Failed to fetch today\'s event:', error);
@@ -48,7 +50,8 @@ function MainPage() {
             Authorization: `Bearer ${token}`
           }
         });
-        setRecentArticles(response.data);
+        const firstTwoArticles = response.data.slice(0, 2);
+        setRecentArticles(firstTwoArticles);
         setLoadingArticles(false);
       } catch (error) {
         console.error('Failed to fetch recent articles:', error);
