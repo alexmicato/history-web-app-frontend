@@ -109,15 +109,17 @@ function UserProfile({ username }) {
                     )}
                 </div>
             </div>
-            <main className='forum-main'>
-                <h1> User Posts</h1>
-                {userPosts.map(post => <PostPreview key={post.id} post={post} />)}
-                <div className="pagination-controls">
-                        <button onClick={previousPage} disabled={page === 0}>Previous</button>
-                        <span>Page {page + 1} of {totalPages}</span>
-                        <button onClick={nextPage} disabled={page + 1 >= totalPages}>Next</button>
-                </div>
-            </main>
+            <div className='profile-posts'>
+                <main className='forum-main'>
+                    <h1> User Posts</h1>
+                    {userPosts.map(post => <PostPreview key={post.id} post={post} />)}
+                    <div className="pagination-controls">
+                            <button onClick={previousPage} disabled={page === 0}>Previous</button>
+                            <span>Page {page + 1} of {totalPages}</span>
+                            <button onClick={nextPage} disabled={page + 1 >= totalPages}>Next</button>
+                    </div>
+                </main>
+            </div>
         </div>
     );
 }

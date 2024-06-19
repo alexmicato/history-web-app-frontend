@@ -46,9 +46,9 @@ function MainPage() {
       try {
         const token = localStorage.getItem('authToken');
         const response = await axios.get('http://localhost:8080/articles/recent', {
-          headers: {
-            Authorization: `Bearer ${token}`
-          }
+            headers: {
+              Authorization: `Bearer ${token}`
+            }
         });
         const firstTwoArticles = response.data.slice(0, 2);
         setRecentArticles(firstTwoArticles);

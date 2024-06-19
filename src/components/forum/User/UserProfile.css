@@ -70,6 +70,11 @@
     margin-left: 30px;
 }
 
+.profile-posts {
+    flex: 3; /* Allow to take more space */
+    display: block; /* Use block if not using flex or grid */
+    width: 100%; /* Full width of its container */
+}
 @media (max-width: 768px) {
     .profile-info {
         padding: 15px; /* Slightly reduce padding for more space */

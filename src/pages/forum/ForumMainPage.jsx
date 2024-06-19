@@ -35,6 +35,7 @@ function ForumMainPage()
                     }
                 });
                 setPosts(response.data.content);
+                //console.log("Posts received:" + response.data.content);
                 setTotalPages(response.data.totalPages);
             } catch (error) {
                 console.error('Error initializing data', error);
