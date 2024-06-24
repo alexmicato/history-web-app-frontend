@@ -1,0 +1,22 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"eventType": "battle",
+				"name": "Battle of Vienna",
+				"date": "14 July 1683 – 12 September 1683",
+				"description":"Habsburg forces repel the Ottoman assault on Vienna, halting definitvely the Ottoman expansion in Europe",
+				"imageUrl":"/assets/images/backgrounds/markers/events/1700/vienna_1683.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					16.3725,
+					48.208333
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

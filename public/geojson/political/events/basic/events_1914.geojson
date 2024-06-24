@@ -1,0 +1,22 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"eventType": "event",
+				"name": "Beginning of World War 1",
+				"date": "28 July 1914",
+				"description":"WW1 begins after the assasination of Archduke Franz Ferdinand in Sarajevo",
+				"imageUrl":"/assets/images/backgrounds/markers/events/1914/franz_ferdinand_assassination.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					18.413056,
+					43.856389
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

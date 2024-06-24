@@ -1,0 +1,22 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"eventType": "battle",
+				"name": "The Yugoslav Wars",
+				"date": "31 March 1991 – 13 August 2001",
+				"description":"Breakup of Yugoslavia errupts in civil war",
+				"imageUrl":"/assets/images/backgrounds/markers/events/1994/Yugoslav_wars.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					 20.466667,
+					44.8
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

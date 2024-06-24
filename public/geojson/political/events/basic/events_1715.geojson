@@ -1,0 +1,22 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"eventType": "battle",
+				"name": "War of the Spanish Succession",
+				"date": "1701–1714",
+				"description":"European powers wage war over the succession to the Spanish Crown",
+				"imageUrl":"/assets/images/backgrounds/markers/events/1715/spanish_succession.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					-3.703333,
+					40.416944
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

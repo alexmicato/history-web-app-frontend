@@ -4,15 +4,15 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"name": "Caesar",
-				"date": "Born 100 BC",
-				"significance":"Roman dictator. He played a critical role in the demise of the Roman Republic and the rise of the Roman Empire.",
-				"imageUrl":"/assets/images/backgrounds/markers/figures/BC1/caesar.jpg"
+				"name": "John. F. Kennedy",
+				"date": "May 29, 1917 - November 22, 1963",
+				"significance":"President of USA",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/1960/kennedy.jpg"
 			},
 			"geometry": {
 				"coordinates": [
-					12.468559639998972,
-          41.895507187914745
+					-71.121667,
+          42.331667
 				],
 				"type": "Point"
 			}

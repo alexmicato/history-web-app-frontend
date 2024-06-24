@@ -4,15 +4,15 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"name": "Caesar",
-				"date": "Born 100 BC",
-				"significance":"Roman dictator. He played a critical role in the demise of the Roman Republic and the rise of the Roman Empire.",
-				"imageUrl":"/assets/images/backgrounds/markers/figures/BC1/caesar.jpg"
+				"name": "Bill Clinton",
+				"date": "Born August 19, 1946",
+				"significance":"President of the USA",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/1994/clinton.jpg"
 			},
 			"geometry": {
 				"coordinates": [
-					12.468559639998972,
-          41.895507187914745
+					-93.59,
+          33.676389
 				],
 				"type": "Point"
 			}

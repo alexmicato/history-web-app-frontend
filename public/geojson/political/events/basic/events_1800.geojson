@@ -1,0 +1,22 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"eventType": "battle",
+				"name": "Battle of Marengo",
+				"date": "14 June 1800",
+				"description":"Napoleon defeats the Austrians and seals the fate of the War of the Second Coalition",
+				"imageUrl":"/assets/images/backgrounds/markers/events/1800/marengo.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					8.6775,
+					44.885556
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

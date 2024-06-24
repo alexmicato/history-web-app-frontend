@@ -1,0 +1,22 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"eventType": "battle",
+				"name": "American Revolutionary War",
+				"date": "April 19, 1775 – September 3, 1783",
+				"description":"United States of America wins independence from Great Britain",
+				"imageUrl":"/assets/images/backgrounds/markers/events/1783/american_revolution.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					-77.30514931142491,
+          38.88922935580979
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

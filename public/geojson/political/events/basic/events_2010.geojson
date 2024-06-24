@@ -1,0 +1,22 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"eventType": "event",
+				"name": "2008 Financial Crisis",
+				"date": "2008",
+				"description":"Most severe worldwide economic crisis since the Great Depression",
+				"imageUrl":"/assets/images/backgrounds/markers/events/2010/2008_financial_crisis.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					-74.0059,
+					40.7127
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

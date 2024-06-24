@@ -1,0 +1,22 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"eventType": "event",
+				"name": "The Great Depression",
+				"date": "1929-1939",
+				"description":"Severe Economic Crisis",
+				"imageUrl":"/assets/images/backgrounds/markers/events/1930/great_depression.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					-74.0059,
+					40.7127
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

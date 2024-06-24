@@ -1,0 +1,22 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"eventType": "battle",
+				"name": "Turkish War of Independence",
+				"date": "19 May 1919 – 11 October 1922",
+				"description":"Wars following the breakup of the Ottoman Empire",
+				"imageUrl":"/assets/images/backgrounds/markers/events/1920/turkish_war.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					32.85,
+					39.93
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

@@ -1,0 +1,22 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"eventType": "treaty",
+				"name": "Munich Conference",
+				"date": "30 September 1938",
+				"description":"Results in Germany annexing Sudetenland from Czechoslovakia",
+				"imageUrl":"/assets/images/backgrounds/markers/events/1938/munich_conf.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					11.575,
+					48.1375
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

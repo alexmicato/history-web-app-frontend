@@ -4,15 +4,15 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"name": "Caesar",
-				"date": "Born 100 BC",
-				"significance":"Roman dictator. He played a critical role in the demise of the Roman Republic and the rise of the Roman Empire.",
-				"imageUrl":"/assets/images/backgrounds/markers/figures/BC1/caesar.jpg"
+				"name": "Franz Joseph",
+				"date": "18 August 1830 - 21 November 1916",
+				"significance":"Emperor of Austria-Hungary.",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/1920/Francis_Joseph.jpg"
 			},
 			"geometry": {
 				"coordinates": [
-					12.468559639998972,
-          41.895507187914745
+					16.311865,
+          48.184516
 				],
 				"type": "Point"
 			}

@@ -1,0 +1,22 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"eventType": "event",
+				"name": "Napoleon abdicates definitively",
+				"date": "22 June 1815",
+				"description":"Napoleon abdicates as Emperor of the French for the second time, effectively ending the Napoleonic Wars",
+				"imageUrl":"/assets/images/backgrounds/markers/events/1815/napoleon_abdication.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					2.352222,
+					48.856667
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

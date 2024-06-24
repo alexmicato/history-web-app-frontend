@@ -21,6 +21,9 @@ import CreateArticlePage from "./pages/Articles/CreateArticlePage";
 import ArticlePage from "./pages/Articles/ArticlePage";
 
 function App() {
+
+  document.title = "History Explorer";
+
   return (
     <NotificationProvider>
       <UserProvider>

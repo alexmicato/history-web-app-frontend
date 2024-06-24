@@ -4,15 +4,15 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"name": "Caesar",
-				"date": "Born 100 BC",
-				"significance":"Roman dictator. He played a critical role in the demise of the Roman Republic and the rise of the Roman Empire.",
-				"imageUrl":"/assets/images/backgrounds/markers/figures/BC1/caesar.jpg"
+				"name": "Joseph Stalin",
+				"date": "18 December 1878 - 5 March 1953",
+				"significance":"Leader of the Soviet Union",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/1938/stalin.jpg"
 			},
 			"geometry": {
 				"coordinates": [
-					12.468559639998972,
-          41.895507187914745
+					44.1,
+          41.966667
 				],
 				"type": "Point"
 			}

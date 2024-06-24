@@ -1,0 +1,22 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"eventType": "battle",
+				"name": "Russo-Japanese war",
+				"date": "8 February 1904  – 5 September 1905",
+				"description":"War between Russia and Japan over the control of Manchuria",
+				"imageUrl":"/assets/images/backgrounds/markers/events/1900/russo_japanese_war.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					124.52583,
+					40.1915
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

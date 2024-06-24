@@ -1,0 +1,22 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"eventType": "treaty",
+				"name": "Peace of Westphalia",
+				"date": "24 October 1648",
+				"description":"Ends the Thirty Years War. Establishes France as the most powerful country in Europe.",
+				"imageUrl":"/assets/images/backgrounds/markers/events/1650/peaceOfWestphalia.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					7.933333,
+					51.608333
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

@@ -4,15 +4,15 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"name": "Caesar",
-				"date": "Born 100 BC",
-				"significance":"Roman dictator. He played a critical role in the demise of the Roman Republic and the rise of the Roman Empire.",
-				"imageUrl":"/assets/images/backgrounds/markers/figures/BC1/caesar.jpg"
+				"name": "Traian Basescu",
+				"date": "Born 4 November 1951",
+				"significance":"President of Romania",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/2010/basescu.jpg"
 			},
 			"geometry": {
 				"coordinates": [
-					12.468559639998972,
-          41.895507187914745
+					28.408333,
+          44.173611
 				],
 				"type": "Point"
 			}

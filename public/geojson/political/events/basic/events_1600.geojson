@@ -17,23 +17,6 @@
 				],
 				"type": "Point"
 			}
-		},
-		{
-			"type": "Feature",
-			"properties": {
-				"eventType":"events",
-				"name":"The Great Schism",
-				"date":"16 July 1054",
-				"description":"Break of communion between Catholic and Eastern Orthodox Churches",
-				"imageUrl":"/assets/images/backgrounds/markers/events/1100/great_schism.jpg"
-			},
-			"geometry": {
-				"coordinates": [
-					12.503419292075563,
-					41.861857086167677
-				],
-				"type": "Point"
-			}
 		}
 	]
 }

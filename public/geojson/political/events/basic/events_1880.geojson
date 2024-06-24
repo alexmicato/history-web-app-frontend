@@ -1,0 +1,22 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"eventType": "treaty",
+				"name": "Berlin Conference",
+				"date": "15 November 1884",
+				"description":"Europeans divide their areas of colonization in Africa",
+				"imageUrl":"/assets/images/backgrounds/markers/events/1880/berlin_conference.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					13.405,
+					52.52
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

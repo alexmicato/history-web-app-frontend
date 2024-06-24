@@ -1,0 +1,22 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"eventType": "treaty",
+				"name": "End of World War II",
+				"date": "September 2, 1945",
+				"description":"WW2 ends with the capitulation of Japan",
+				"imageUrl":"/assets/images/backgrounds/markers/events/1945/ww2_end_asia.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					139.692222,
+					35.689722
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

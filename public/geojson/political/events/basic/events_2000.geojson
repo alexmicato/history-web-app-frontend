@@ -1,0 +1,22 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"eventType": "event",
+				"name": "September 11 attacks",
+				"date": "11 September 2001",
+				"description":"Terrorist attacks on the twin towers",
+				"imageUrl":"/assets/images/backgrounds/markers/events/2000/9_11.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					-74.0059,
+					40.7127
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

@@ -1,0 +1,22 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"eventType": "treaty",
+				"name": "Cuban Missile Crisis",
+				"date": "16–28 October 1962",
+				"description":"Confrontation between the United States and the Soviet Union after soviets deployed nuclear missiles in Cuba",
+				"imageUrl":"/assets/images/backgrounds/markers/events/1960/cuban_crisis.jpg"
+			},
+			"geometry": {
+				"coordinates": [
+					 -82.383333,
+					23.133333
+				],
+				"type": "Point"
+			}
+		}
+	]
+}

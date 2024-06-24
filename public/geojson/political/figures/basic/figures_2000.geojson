@@ -4,15 +4,15 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"name": "Caesar",
-				"date": "Born 100 BC",
-				"significance":"Roman dictator. He played a critical role in the demise of the Roman Republic and the rise of the Roman Empire.",
-				"imageUrl":"/assets/images/backgrounds/markers/figures/BC1/caesar.jpg"
+				"name": "Vladimir Putin",
+				"date": "Born 7 October 1952",
+				"significance":"President of Russia",
+				"imageUrl":"/assets/images/backgrounds/markers/figures/2000/putin.jpg"
 			},
 			"geometry": {
 				"coordinates": [
-					12.468559639998972,
-          41.895507187914745
+					30.308611,
+          59.9375
 				],
 				"type": "Point"
 			}
