@@ -6,12 +6,13 @@ import { useUser } from '../../../contexts/UserContext';
 import { webSocketService } from '../../../services/WebSocketService'
 import { NotificationContext } from '../../../contexts/NotificationContext';
 import { BiSolidConversation } from "react-icons/bi";
+import { useWebSocket } from '../../../hooks/useWebSocket';
 
 function ChatList({ refreshKey }) {
     const [chats, setChats] = useState([]);
     const [loading, setLoading] = useState(true);
     const { user } = useUser();
-    const { newMessageReceived, setNewMessageReceived } = useContext(NotificationContext);
+    //const { newMessageReceived, setNewMessageReceived } = useContext(NotificationContext);
 
     const fetchChats = async () => {
         if (!user || !user.username) {
@@ -39,7 +40,8 @@ function ChatList({ refreshKey }) {
             webSocketService.connect(token).then(() => {
                 webSocketService.subscribeToChats('/topic/chats', (chatUpdate) => {
                     console.log('Chat update received:', chatUpdate);
-                    setNewMessageReceived(true);
+                    setChats(currentChats => [...currentChats, chatUpdate]);
+                    //setNewMessageReceived(true);
                     fetchChats();  // Refresh chat list on update
                 });
             }).catch(error => console.log('WebSocket connection failed: ', error));
@@ -57,7 +59,7 @@ function ChatList({ refreshKey }) {
     return (
         <div className="chat-list">
             {chats.map((chat, index) => (
-                <div key={index} className={`chat-item ${newMessageReceived && chat.username === user.username ? 'new-message' : ''}`}>
+                <div key={index} className={`chat-item ${chat.username === user.username ? 'new-message' : ''}`}>
                     <Link to={`/messages/${chat.username}`} className="chat-link">
                         <div className="chat-name"><BiSolidConversation /> {chat.username}</div>
                         <div className="chat-timestamp">{new Date(chat.lastMessageAt).toLocaleString()}</div>

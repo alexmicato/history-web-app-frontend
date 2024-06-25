@@ -10,13 +10,13 @@ import './ForumNavBar.css';
 function NavBar() {
     const navigate = useNavigate();
     const { user } = useUser();
-    const { newMessageReceived, setNewMessageReceived } = useContext(NotificationContext);
+    //const { newMessageReceived, setNewMessageReceived } = useContext(NotificationContext);
     const [searchQuery, setSearchQuery] = useState('');
     const [showSearch, setShowSearch] = useState(false);
 
     const handleNavigation = (path) => {
         if (path.startsWith('/messages')) {
-            setNewMessageReceived(false); 
+            //setNewMessageReceived(false); 
         }
         navigate(path);
     };
@@ -44,7 +44,7 @@ function NavBar() {
                     <button onClick={() => handleNavigation('/login')}>Login</button> // Optionally add a login button if not logged in
                 )}
                 <button onClick={() => handleNavigation(`/messages/${user.username}`)}>
-                    Messages {newMessageReceived && " (You have new messages)"}
+                    Messages
                 </button>
             </div>
             <button onClick={toggleSearch} className="forum-search-icon">

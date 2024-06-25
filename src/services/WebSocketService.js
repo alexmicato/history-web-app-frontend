@@ -66,6 +66,7 @@ class WebSocketService {
             console.error('WebSocket connection is not established.');
         }
     }
+    
 
     disconnect = () => {
         if (this.stompClient) {

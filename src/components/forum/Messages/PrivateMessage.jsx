@@ -5,13 +5,14 @@ import './PrivateMessage.css';
 import { webSocketService } from '../../../services/WebSocketService';  // Import the WebSocket service
 import { NotificationContext } from '../../../contexts/NotificationContext';
 import { BiSolidConversation } from "react-icons/bi";
+import { useWebSocket } from '../../../hooks/useWebSocket';
 
 function PrivateMessage({ recipientUsername, refreshChats }) {
     const { user } = useUser();
     const [messages, setMessages] = useState([]);
     const [newMessage, setNewMessage] = useState('');
     const messagesEndRef = useRef(null); // Ref for automatic scrolling
-    const { setNewMessageReceived } = useContext(NotificationContext);
+    //const { setNewMessageReceived } = useContext(NotificationContext);
 
     const scrollToBottom = () => {
         if (messagesEndRef.current) {
@@ -29,7 +30,7 @@ function PrivateMessage({ recipientUsername, refreshChats }) {
         webSocketService.connect(token, '/user/queue/messages', (newMessage) => {
             setMessages(prevMessages => [...prevMessages, newMessage]);
             if (newMessage.receiver === user.username) {
-                setNewMessageReceived(true);
+                //setNewMessageReceived(true);
             }
             refreshChats();
             

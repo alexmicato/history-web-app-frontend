@@ -25,7 +25,6 @@ function App() {
   document.title = "History Explorer";
 
   return (
-    <NotificationProvider>
       <UserProvider>
         <Router>
           <div className="App">
@@ -51,7 +50,6 @@ function App() {
           </div>
         </Router>
       </UserProvider>
-    </NotificationProvider>
   );
 }
 
