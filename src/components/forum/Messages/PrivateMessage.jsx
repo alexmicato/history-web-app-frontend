@@ -28,7 +28,9 @@ function PrivateMessage({ recipientUsername, refreshChats }) {
         }
     
         webSocketService.connect(token, '/user/queue/messages', (newMessage) => {
-            setMessages(prevMessages => [...prevMessages, newMessage]);
+            if (newMessage.sender === recipientUsername || newMessage.receiver === recipientUsername) {
+                setMessages(prevMessages => [...prevMessages, newMessage]);
+            }
             if (newMessage.receiver === user.username) {
                 //setNewMessageReceived(true);
             }

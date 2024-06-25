@@ -50,7 +50,7 @@ function ChatList({ refreshKey }) {
         return () => {
             webSocketService.disconnect();
         };
-    }, [user, refreshKey]);
+    }, [user]);
 
     if (loading) {
         return <div>Loading chats...</div>;
