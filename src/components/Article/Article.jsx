@@ -47,6 +47,16 @@ function Article({ article, onUpdateArticle }) {
         setIsEditModalOpen(false);
     };
 
+    const enhanceContentWithIds = (content) => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(content, 'text/html');
+        const headings = doc.querySelectorAll('h3');
+        headings.forEach((heading, index) => {
+            heading.id = `chapter-${index}`;
+        });
+        return doc.body.innerHTML;
+    };
+
     if (!article) {
         return <div>Loading...</div>;
     }
@@ -70,7 +80,7 @@ function Article({ article, onUpdateArticle }) {
                 )}
             </div>
             {article.eventDate && <p>{new Date(article.eventDate).toLocaleDateString()}</p>}
-            <div className="article-content" dangerouslySetInnerHTML={{ __html: article.content }}></div>
+            <div className="article-content" dangerouslySetInnerHTML={{ __html: enhanceContentWithIds(article.content) }}></div>
             <div className="article-tags">
                 <h4>Tags:</h4>
                 <ul>

@@ -39,7 +39,7 @@ function PrivateMessage({ recipientUsername, refreshChats }) {
         }).catch(error => console.error('WebSocket connection failed: ', error));
     
         return () => webSocketService.disconnect();
-    }, [user, refreshChats]);
+    }, [user, refreshChats, recipientUsername]);
 
     const sendMessage = () => {
         if (!newMessage.trim()) return;
@@ -85,7 +85,7 @@ function PrivateMessage({ recipientUsername, refreshChats }) {
         if (user) {
             fetchMessages();
         }
-    }, [user, recipientUsername, fetchMessages]);
+    }, [user, recipientUsername]);
 
     return (
         <div className="private-message-container">

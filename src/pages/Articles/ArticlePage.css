@@ -1,7 +1,7 @@
 .article-page-container {
     background-color: rgba(244, 232, 211, 0.8);
     min-height: 750px;
-    height: 100vh; /* Full height of the parent */
+    height: 100%; /* Full height of the parent */
     width: 100%; /* Full width */
     display: flex;
     justify-content: flex-start; /* Align items at the top */
