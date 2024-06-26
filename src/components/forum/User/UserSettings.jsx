@@ -14,12 +14,49 @@ function UserSettings({ username }) {
   const [usernameError, setUsernameError] = useState("");
   const navigate = useNavigate();
 
+  const validateUsername = (username) => {
+    const pattern = /^[a-zA-Z0-9]{3,}$/;
+    if (!pattern.test(username)) {
+      setUsernameError("Username must be at least 3 characters long and contain only letters and numbers.");
+      return false;
+    }
+    setUsernameError("");
+    return true;
+  };
+
+  const validatePassword = (password) => {
+    const errors = [];
+    if (password.length < 8) {
+      errors.push("at least 8 characters long");
+    }
+    if (!/[A-Z]/.test(password)) {
+      errors.push("at least one uppercase letter (A-Z)");
+    }
+    if (!/[a-z]/.test(password)) {
+      errors.push("at least one lowercase letter (a-z)");
+    }
+    if (!/\d/.test(password)) {
+      errors.push("at least one digit (0-9)");
+    }
+    if (!/[@$!%*?&]/.test(password)) {
+      errors.push("at least one special character (@$!%*?&)");
+    }
+    if (errors.length > 0) {
+      setPasswordError(`Password must be ${errors.join(', ')}.`);
+      return false;
+    }
+    setPasswordError(""); // Clear any existing error message
+    return true;
+  };
+  
+
   const handleNavigation = (path) => {
     navigate(path);
   };
 
   const handleUsernameChange = (e) => {
     setNewUsername(e.target.value);
+    validateUsername(e.target.value);
   };
 
   const handleProfilePicChange = (e) => {
@@ -31,19 +68,10 @@ function UserSettings({ username }) {
   };
 
   const handleNewPasswordChange = (e) => {
-    //if (!validatePassword(e.target.value)) return;
     setNewPassword(e.target.value);
-  };
-
-  const validatePassword = (password) => {
-    const pattern =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-    if (!pattern.test(password)) {
-      setPasswordError("Password does not meet the security requirements.");
-      return false;
+    if (!validatePassword(e.target.value)) {
+      e.preventDefault(); // Prevent form submission if password is invalid
     }
-    setPasswordError("");
-    return true;
   };
 
   const handleUsernameUpdate = async (e) => {
@@ -77,23 +105,11 @@ function UserSettings({ username }) {
       );
       handleNavigation("/login");
     } catch (error) {
-      if (
-        error.response &&
-        typeof error.response.data === "string" &&
-        error.response.data.includes("Username")
-      ) {
-        setUsernameError(error.response.data);
-      } else if (error.response) {
-        // If the data is not a string, you may want to handle it differently
-        alert(
-          `Failed to update username: ${
-            error.response.data?.message || "Unknown error"
-          }`
-        );
+      console.error("Error updating username:", error);
+      if (error.response && error.response.data) {
+        setUsernameError(error.response.data.message || error.response.data);
       } else {
-        alert(
-          "Failed to update username: Network error or server is unreachable."
-        );
+        setUsernameError("Network error or server is unreachable.");
       }
     }
   };
@@ -157,23 +173,11 @@ function UserSettings({ username }) {
       );
       handleNavigation("/login");
     } catch (error) {
-      if (
-        error.response &&
-        typeof error.response.data === "string" &&
-        error.response.data.includes("Username")
-      ) {
-        setPasswordError(error.response.data);
-      } else if (error.response) {
-        // If the data is not a string, you may want to handle it differently
-        alert(
-          `Failed to update password: ${
-            error.response.data?.message || "Unknown error"
-          }`
-        );
+      console.error("Error updating password:", error);
+      if (error.response && error.response.data) {
+        setPasswordError(error.response.data.message || error.response.data);
       } else {
-        alert(
-          "Failed to update password: Network error or server is unreachable."
-        );
+        setPasswordError("Network error or server is unreachable.");
       }
     }
   };

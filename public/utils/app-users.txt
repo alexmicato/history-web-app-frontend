@@ -10,7 +10,12 @@ username: radu
 email:radu@radu.com
 pass:Raduradu23!
 
+username: ionut
+email: ionut@email.com
+pass: Ionut23!
+
 Admin:
 username:admin
 email:admin@admin.com
 pass: adminpass
+
