@@ -204,7 +204,7 @@ function ArticleForm({
                 </div>
             ))}
             <button type="button" className="add-reference-button" onClick={handleAddReference}>Add Reference</button>
-            <button type="submit" className="submit-button">Submit</button>
+            <button type="submit" className="article-form-submit-button">Submit</button>
         </form>
     );
 }

@@ -70,7 +70,7 @@
 }
 
 .article-form .add-reference-button,
-.article-form .submit-button {
+.article-form .article-form-submit-button {
     background-color: #007bff;
     color: white;
     border: none;
@@ -86,7 +86,7 @@
 }
 
 .article-form .add-reference-button:hover,
-.article-form .submit-button:hover {
+.article-form .article-form-submit-button:hover {
     background-color: #0056b3;
 }
 
