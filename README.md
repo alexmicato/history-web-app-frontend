@@ -1,3 +1,5 @@
+This web application offers an interactive platform for exploring history through dynamic maps and timelines. Built with React and Spring Boot, it features an interactive timeline integrated with OpenStreetMaps, where users can explore historical events by year and location. Additional features include a forum and a section with historical articles. Features to be added: quizzes, multi-language support. 
+
 # Main timeline page
 
 ![image](https://github.com/user-attachments/assets/059d3e08-6421-48c2-8013-ffd6c5b43426)
