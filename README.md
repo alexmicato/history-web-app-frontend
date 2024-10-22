@@ -2,7 +2,7 @@ This web application offers an interactive platform for exploring history throug
 
 # Main timeline page
 
-![image](https://github.com/user-attachments/assets/059d3e08-6421-48c2-8013-ffd6c5b43426)
+![Untitledvideo-MadewithClipchamp-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/21f5b54b-56b6-4ef2-97a4-fa063440dabb)
 
 Users can select a year and see the borders change. When clicking on a country you can see information about that country. You can also change layers, and choose to display more information like battles or historical events. 
 
